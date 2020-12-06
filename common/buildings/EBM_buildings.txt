@@ -1,0 +1,19 @@
+buildings = {
+
+	#Research Centre
+	#This structure should be focused on research
+	tech_centre = {
+		
+		base_cost = 10000
+		per_level_extra_cost = 10000
+		max_level = 5 #This can be changed for balancing purposes
+		value = 1
+		icon_frame = 8
+		show_on_map = 1
+		shares_slots = yes
+		#The modifiers can't be changed during the game. This is a general purpose Building for now.
+		
+		research_speed_factor = 0.05
+	}
+
+}
