@@ -11,9 +11,12 @@ buildings = {
 		icon_frame = 8
 		show_on_map = 1
 		shares_slots = yes
+		infrastructure_construction_effect = yes
 		#The modifiers can't be changed during the game. This is a general purpose Building for now.
 		
 		research_speed_factor = 0.05
+		production_speed_buildings_factor = 0.1
+		
 	}
 
 }

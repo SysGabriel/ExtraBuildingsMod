@@ -1,0 +1,46 @@
+country_event = {
+	
+	id = EBM_tech_centre.0
+	title = EBM_tech_centre.0.t
+	desc = EBM_tech_centre.0.d
+
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	trigger = {
+		if = {
+			tech_centre > 1
+			NOT = {
+				has_idea = EBM_tech_centre_idea_built
+			}
+		}
+	}
+
+	option = {
+		name = EBM_tech_centre.0.a
+		every_country = {
+			add_idea = EBM_tech_centre_idea_behind
+		}	
+	}
+
+	option = {
+		name = EBM_tech_centre.0.b
+		every_country = {
+			if = {
+				has_idea = EBM_tech_centre_idea_built
+			}
+		}
+	}
+
+	option = {
+		name = EBM_tech_centre.0.c
+		if = {
+			has_built = {
+				type = tech_centre
+				value > 1
+			}
+		}
+		add_idea = EBM_tech_centre_idea_built
+	}
+}

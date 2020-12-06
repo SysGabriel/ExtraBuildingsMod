@@ -2,6 +2,13 @@
   tech_centre:0 "Research Centre"
   tech_centre_short:0 "Res. Centre"
   tech_centre_plural:0 "Research Centries"
-  tech_centre_desc:0 "This building will help with your §GResearch§.\nBut it's quite volatile and can be easly destroyed by bombing."
+  tech_centre_desc:0 "This building will help with your research.\nBut it's quite volatile and can be easly destroyed by bombing."
+  EBM_tech_centre.0.t:0 "Dawn of the Tech Centre"
+  EBM_tech_centre.0.d:0 "Today, the [Root.GetName] has built the first tech centre in the history. It seems that the [Root.GetAdjective] has entered in a dawn age for the future to prosperity or to destruction?"
+  EBM_tech_centre.0.a:0 "Res... What?"
+  EBM_tech_centre.0.b:0 "Let's keep the eyes on it."
+  EBM_tech_centre.0.c:0 "For the glory of [Root.GetAdjective]."
+  EBM_tech_centre_idea_behind:0 "Late for the progress"
+  EBM_tech_centre_idea_built:0 "Tech Centre"
 
 

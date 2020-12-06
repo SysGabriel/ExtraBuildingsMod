@@ -1,0 +1,37 @@
+ideas = {
+	country = {
+		EBM_tech_centre_idea_behind = {
+			picture = generic_research_bonus
+			modifier = {
+				production_speed_tech_centre_factor = 0.5
+				ai_badass_factor = 1
+			}
+
+			on_add = {
+				add_stability = -0.1
+				add_war_support = 0.1
+			}
+
+			allowed_civil_war = { always = yes }
+			allowed = {	has_war = yes }
+
+		}
+
+		EBM_tech_centre_idea_built = {
+			picture = jap_duplicate_research
+			modifier = {
+				research_speed_factor = 0.5
+				production_speed_infrastructure_factor = 0.2
+			}
+
+			on_add = {
+				add_stability = 0.1
+				add_war_support = -0.1
+				add_research_slot = 1	
+			}
+
+			allowed_civil_war = { always = yes }
+			allowed = {	has_war = yes }
+		}
+	}
+}
