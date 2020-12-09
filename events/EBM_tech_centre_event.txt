@@ -4,8 +4,7 @@ country_event = {
 	title = EBM_tech_centre.0.t
 	desc = EBM_tech_centre.0.d
 
-	mean_time_to_happen = {
-		days = 0
+	trigger = {
 		if = {
 			has_built = {
 				type = tech_centre
