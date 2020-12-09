@@ -1,21 +1,18 @@
-country_event = {
+event = {
 	
 	id = EBM_tech_centre.0
 	title = EBM_tech_centre.0.t
 	desc = EBM_tech_centre.0.d
-
+	
 	trigger = {
-		if = {
-			limit = {				
-				has_built = {
-					type = tech_centre
-					value > 1
-				}
-				NOT = {
-					has_idea = EBM_tech_centre_idea_built
-				}
-			}
+		has_built = {
+			type = tech_centre
+			value > 1
 		}
+		NOT = {
+			has_idea = EBM_tech_centre_idea_built
+		}
+		
 	}
 
 	option = {
@@ -31,7 +28,7 @@ country_event = {
 						}
 					}					
 				}
-				add_war_support = 0.1
+				add_ideas = EBM_tech_centre_idea_behind
 			}
 		}	
 	}
