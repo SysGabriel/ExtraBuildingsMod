@@ -5,12 +5,12 @@ country_event = {
 	desc = EBM_tech_centre.0.d
 
 	mean_time_to_happen = {
-		days = 100
-	}
-
-	trigger = {
+		days = 0
 		if = {
-			tech_centre > 1
+			has_built = {
+				type = tech_centre
+				value > 1
+			}
 			NOT = {
 				has_idea = EBM_tech_centre_idea_built
 			}
