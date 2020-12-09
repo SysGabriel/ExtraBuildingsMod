@@ -6,12 +6,14 @@ country_event = {
 
 	trigger = {
 		if = {
-			has_built = {
-				type = tech_centre
-				value > 1
-			}
-			NOT = {
-				has_idea = EBM_tech_centre_idea_built
+			limit = {				
+				has_built = {
+					type = tech_centre
+					value > 1
+				}
+				NOT = {
+					has_idea = EBM_tech_centre_idea_built
+				}
 			}
 		}
 	}
@@ -19,7 +21,18 @@ country_event = {
 	option = {
 		name = EBM_tech_centre.0.a
 		every_country = {
-			add_idea = EBM_tech_centre_idea_behind
+			if = {
+				limit = {
+					NOT = {
+						has_idea = EBM_tech_centre_idea_built
+						has_built = {
+							type = tech_centre
+							value > 1
+						}
+					}					
+				}
+				add_war_support = 0.1
+			}
 		}	
 	}
 
@@ -27,7 +40,10 @@ country_event = {
 		name = EBM_tech_centre.0.b
 		every_country = {
 			if = {
-				has_idea = EBM_tech_centre_idea_built
+				limit = {
+					has_idea = EBM_tech_centre_idea_built
+				}				
+				add_stability = 0.01
 			}
 		}
 	}
@@ -35,11 +51,17 @@ country_event = {
 	option = {
 		name = EBM_tech_centre.0.c
 		if = {
-			has_built = {
-				type = tech_centre
-				value > 1
+			limit = {
+				has_built = {
+					type = tech_centre
+					value > 1
+				}
+				NOT = {
+					has_idea = EBM_tech_centre_idea_built
+				}
 			}
+			add_ideas = EBM_tech_centre_idea_built			
 		}
-		add_idea = EBM_tech_centre_idea_built
+		
 	}
 }
