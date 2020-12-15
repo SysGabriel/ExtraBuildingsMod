@@ -7,11 +7,6 @@ ideas = {
 				ai_badass_factor = 1
 			}
 
-			on_add = {
-				add_stability = -0.1
-				add_war_support = 0.1
-			}
-
 			allowed_civil_war = { always = yes }
 			allowed = {	has_war = yes }
 
@@ -25,9 +20,7 @@ ideas = {
 			}
 
 			on_add = {
-				add_stability = 0.1
-				add_war_support = -0.1
-				add_research_slot = 1	
+				add_research_slot = 1
 			}
 
 			allowed_civil_war = { always = yes }

@@ -1,64 +1,83 @@
-event = {
+add_namespace = EBMTC
+country_event = {
 	
-	id = EBM_tech_centre.0
-	title = EBM_tech_centre.0.t
-	desc = EBM_tech_centre.0.d
-	
+	id = EBMTC.1
+	title = EBMTC.1.t
+	desc = EBMTC.1.d
+
+	mean_time_to_happen = {
+		days = 30
+		has_built = {
+			type = tech_centre
+			value = 1
+		}
+	}
+
 	trigger = {
 		has_built = {
 			type = tech_centre
-			value > 1
+			value = 1
 		}
 		NOT = {
 			has_idea = EBM_tech_centre_idea_built
 		}
 		
 	}
-
+ 
 	option = {
-		name = EBM_tech_centre.0.a
-		every_country = {
-			if = {
-				limit = {
-					NOT = {
-						has_idea = EBM_tech_centre_idea_built
-						has_built = {
-							type = tech_centre
-							value > 1
+		name = EBMTC.1.a
+		add_ideas = EBM_tech_centre_idea_built
+		remove_ideas = EBM_tech_centre_idea_behind
+		hidden_effect = {
+			every_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = EBM_tech_centre_idea_built
 						}
-					}					
+					}
+					news_event = EBMTC.2
 				}
-				add_ideas = EBM_tech_centre_idea_behind
-			}
-		}	
-	}
-
-	option = {
-		name = EBM_tech_centre.0.b
-		every_country = {
-			if = {
-				limit = {
-					has_idea = EBM_tech_centre_idea_built
-				}				
-				add_stability = 0.01
+				if = {
+					limit = {						
+						has_idea = EBM_tech_centre_idea_built
+					}
+					news_event = EBMTC.3
+				}
 			}
 		}
-	}
+	}	
+}
+
+news_event = {
+	id = EBMTC.2
+	title = EBMTC.2.t
+	desc = EBMTC.2.d
+
+	is_triggered_only = yes
 
 	option = {
-		name = EBM_tech_centre.0.c
-		if = {
-			limit = {
-				has_built = {
-					type = tech_centre
-					value > 1
-				}
-				NOT = {
-					has_idea = EBM_tech_centre_idea_built
-				}
-			}
-			add_ideas = EBM_tech_centre_idea_built			
+		name = EBMTC.2.a
+		hidden_effect = {
+			add_ideas = EBM_tech_centre_idea_behind
 		}
-		
 	}
+	
+}
+
+news_event = {
+	id = EBMTC.3
+	title = EBMTC.2.t
+	desc = EBMTC.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBMTC.3.a
+		hidden_effect = {
+			add_stability = 0.01
+			add_war_support = -0.1
+		}
+	}
+	
 }
