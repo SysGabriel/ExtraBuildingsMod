@@ -1,10 +1,20 @@
 add_namespace = EBMTC
+
+# TODO
+# Create a diverse event chain for the Tech Centre
+# 3 events for civilian focus
+# 3 events for military focus
+# 8 events for espionage focus
+# Create random events from incidents on the building
+
+# First Event
 country_event = {
 	
 	id = EBMTC.1
 	title = EBMTC.1.t
 	desc = EBMTC.1.d
 
+	fire_only_once = yes
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -24,6 +34,10 @@ country_event = {
 		name = EBMTC.1.a
 		add_ideas = EBM_tech_centre_idea_built
 		remove_ideas = EBM_tech_centre_idea_behind
+		set_variable = {
+			var = has_tech_centre
+			value = 1 #Adding a global variable for the next events 1 to true and 0 to false
+		}
 		hidden_effect = {
 			every_country = {
 				if = {
@@ -73,4 +87,60 @@ news_event = {
 		}
 	}
 	
+}
+
+# Second Event - Focus Selection
+country_event = {
+	
+	id = EBMTC.4
+	title = EBMTC.4.t
+	desc = EBMTC.4.d
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	trigger = {
+		check_variable = {
+			var = has_tech_centre
+			value = 1
+			compare = equals
+		}
+	}
+	
+	option = {
+		name = EBMTC.4.a
+		hidden_effect = {
+			set_variable = {
+				var = tech_centre_focus
+				value = "civilian"
+			}
+			add_ideas = EBM_tech_centre_idea_civ_focus
+		}
+	}
+
+	option = {
+		name = EBMTC.4.b
+		hidden_effect = {
+			set_variable = {
+				var = tech_centre_focus
+				value = "military"
+			}
+			add_ideas = EBM_tech_centre_idea_mil_focus
+		}
+	}
+
+	option = {
+		name = EBMTC.4.c
+		hidden_effect = {
+			set_variable = {
+				var = tech_centre_focus
+				value = "espionage"
+			}
+			add_ideas = EBM_tech_centre_idea_spy_focus
+		}
+	}
+
+
 }
