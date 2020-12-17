@@ -6,11 +6,7 @@ country_event = {
 	desc = EBMTC.1.d
 
 	mean_time_to_happen = {
-		days = 30
-		has_built = {
-			type = tech_centre
-			value = 1
-		}
+		months = 1
 	}
 
 	trigger = {
@@ -38,10 +34,7 @@ country_event = {
 					}
 					news_event = EBMTC.2
 				}
-				if = {
-					limit = {						
-						has_idea = EBM_tech_centre_idea_built
-					}
+				else = {
 					news_event = EBMTC.3
 				}
 			}
