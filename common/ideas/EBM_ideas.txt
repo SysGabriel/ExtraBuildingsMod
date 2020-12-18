@@ -8,7 +8,10 @@ ideas = {
 			}
 
 			allowed_civil_war = { always = yes }
-			allowed = {	has_war = yes }
+			allowed = {	
+				has_war = yes 
+				always = no
+			}
 
 		}
 
@@ -24,11 +27,14 @@ ideas = {
 			}
 
 			allowed_civil_war = { always = yes }
-			allowed = {	has_war = yes }
+			allowed = {	
+				has_war = yes 
+				always = no
+			}
 		}
 
 		EBM_tech_centre_idea_civ_focus = {
-			picture = idea_generic_build_infrastructure
+			picture = generic_build_infrastructure
 			modifier = {
 				production_speed_buildings_factor = 0.25
 				research_speed_factor = 0.25
@@ -39,12 +45,15 @@ ideas = {
 			}
 
 			allowed_civil_war = { always = yes }
-			allowed = {	has_war = yes }
+			allowed = {	
+				has_war = yes 
+				always = no
+			}
 			
 		}
 
 		EBM_tech_centre_idea_mil_focus = {
-			picture = idea_generic_war_preparation
+			picture = generic_war_preparation
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.5
 				production_factory_max_efficiency_factor = 0.25
@@ -59,12 +68,15 @@ ideas = {
 			}
 			
 			allowed_civil_war = { always = yes }
-			allowed = {	has_war = yes }
+			allowed = {	
+				has_war = yes 
+				always = no
+			}
 			
 		}
 
 		EBM_tech_centre_idea_spy_focus = {
-			picture = idea_generic_secret_police
+			picture = generic_secret_police
 			modifier = {
 				operative_slot = 1
 				operation_cost = -0.5
@@ -75,7 +87,10 @@ ideas = {
 			}
 			
 			allowed_civil_war = { always = yes }
-			allowed = {	has_war = yes }
+			allowed = {	
+				has_war = yes 
+				always = no
+			}
 			
 		}
 
