@@ -30,10 +30,6 @@ country_event = { #Try change this to a news event
 		name = EBMTC.1.a
 		add_ideas = EBM_tech_centre_idea_built
 		remove_ideas = EBM_tech_centre_idea_behind
-		set_variable = {
-			var = has_tech_centre
-			value = 1 #Adding a global variable for the next events 1 to true and 0 to false
-		}
 		hidden_effect = {
 			every_country = {
 				if = {
@@ -91,21 +87,23 @@ country_event = {
 	id = EBMTC.4
 	title = EBMTC.4.t
 	desc = EBMTC.4.d
-	fire_only_once = yes
 	
 	mean_time_to_happen = {
 		years = 3
 	}
 
 	trigger = {
-		check_variable = {
-			var = has_tech_centre
-			value = 1
-			compare = equals
+		NOT = {
+			OR = {
+				has_idea = EBM_tech_centre_idea_civ_focus
+				has_idea = EBM_tech_centre_idea_mil_focus
+				has_idea = EBM_tech_centre_idea_spy_focus
+			}
 		}
 	}
-	
+	timeout_days = 60
 	option = {
+		
 		name = EBMTC.4.a
 		hidden_effect = {
 			set_variable = {
@@ -137,6 +135,5 @@ country_event = {
 			add_ideas = EBM_tech_centre_idea_spy_focus
 		}
 	}
-
 
 }
