@@ -89,26 +89,26 @@ country_event = {
 	desc = EBMTC.4.d
 	
 	mean_time_to_happen = {
-		years = 3
+		months = 3	
 	}
 
 	trigger = {
+		date > 1940.1.1
+		has_idea = EBM_tech_centre_idea_built
 		NOT = {
-			OR = {
-				has_idea = EBM_tech_centre_idea_civ_focus
-				has_idea = EBM_tech_centre_idea_mil_focus
-				has_idea = EBM_tech_centre_idea_spy_focus
-			}
+			has_idea = EBM_tech_centre_idea_civ_focus
+			has_idea = EBM_tech_centre_idea_mil_focus
+			has_idea = EBM_tech_centre_idea_spy_focus
 		}
 	}
-	timeout_days = 60
+
 	option = {
 		
 		name = EBMTC.4.a
 		hidden_effect = {
 			set_variable = {
 				var = tech_centre_focus
-				value = "civilian"
+				value = 1
 			}
 			add_ideas = EBM_tech_centre_idea_civ_focus
 		}
@@ -119,7 +119,7 @@ country_event = {
 		hidden_effect = {
 			set_variable = {
 				var = tech_centre_focus
-				value = "military"
+				value = 2
 			}
 			add_ideas = EBM_tech_centre_idea_mil_focus
 		}
@@ -130,10 +130,80 @@ country_event = {
 		hidden_effect = {
 			set_variable = {
 				var = tech_centre_focus
-				value = "espionage"
+				value = 3
 			}
 			add_ideas = EBM_tech_centre_idea_spy_focus
 		}
 	}
 
+}
+
+# CIVILIAN EVENTS
+
+country_event = {
+	
+	id = EBMTC.5
+	desc = EBMTC.5.d
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	trigger = {
+		date > 1942.1.1
+		AND = {
+			check_variable = {
+				var = tech_centre_focus
+				value = 1
+				compare = equals
+			}
+			has_idea = EBM_tech_centre_idea_civ_focus
+		}
+	}
+
+	option = {
+		name = EBMTC.5.a
+		swap_ideas = {
+			remove_idea = EBM_tech_centre_idea_civ_focus
+			add_idea = EBM_tech_centre_idea_civ2_focus
+		}
+	}
+}
+
+country_event = {
+	
+	id = EBMTC.6
+	desc = EBMTC.6.d
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	trigger = {
+		date > 1944.1.1
+		AND = {
+			check_variable = {
+				var = tech_centre_focus
+				value = 1
+				compare = equals
+			}
+			has_idea = EBM_tech_centre_idea_civ2_focus
+		}
+	}
+
+	option = {
+		name = EBMTC.6.a
+		swap_ideas = {
+			remove_idea = EBM_tech_centre_idea_civ2_focus
+			add_idea = EBM_tech_centre_idea_civ3a_focus
+		}
+	}
+
+	option = {
+		name = EBMTC.6.b
+		swap_ideas = {
+			remove_idea = EBM_tech_centre_idea_civ2_focus
+			add_idea = EBM_tech_centre_idea_civ3b_focus
+		}
+	}
 }

@@ -14,7 +14,7 @@ buildings = {
 		shares_slots = yes
 		infrastructure_construction_effect = yes
 		
-		research_speed_factor = 0.5		
+		research_speed_factor = 0.05		
 	}
 
 }
