@@ -129,6 +129,7 @@ ideas = {
 			}
 		}
 
+		#Best Idea to reach, however, I need to create some conditions to met, before giving this to a nation
 		EBM_tech_centre_idea_civ4b_focus = {
 			picture = generic_build_infrastructure
 			modifier = {
@@ -139,7 +140,9 @@ ideas = {
 				min_export = 0.05
 				stability_weekly_factor = 0.025
 				monthly_population = 2
-				local_resources_factor = -0.25
+				local_resources_factor = -0.15
+				neutrality_drift = 0.5
+				neutrality_acceptance = 50
 			}
 
 			allowed_civil_war = { always = yes }

@@ -236,7 +236,7 @@ country_event = {
 	}
 }
 
-# CIVILIAN FOCUSED PRODUCTION EVENT
+# CIVILIAN CENTRALIZED PRODUCTION EVENT CHAIN
 # This can be very unbalanced with some mods, we need to focus on balancing after few matches in MP.
 
 country_event = {
@@ -329,4 +329,64 @@ news_event = {
 		}
 	}
 	
+}
+
+# CIVILIAN FOCUSED DEVELOPMENT EVENT CHAIN
+# This can be very unbalanced event for the SP.
+# Try create some conditions to archive the OP idea
+
+country_event = {
+	
+	id = EBMTC.10
+	desc = EBMTC.10.d
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	trigger = {
+		date > 1946.1.1
+		AND = {
+			has_idea = EBM_tech_centre_idea_civ3b_focus
+			check_variable = {
+				var = tech_centre_focus_level
+				value = 3
+				compare = equals
+			}
+			check_variable = {
+				var = tech_centre_focus_target
+				value = 1
+				compare = equals
+			}
+		}
+	}
+
+	option = {
+		name = EBMTC.10.a
+		swap_ideas = {
+			remove_idea = EBM_tech_centre_idea_civ3b_focus
+			add_idea = EBM_tech_centre_idea_civ4b_focus
+		}
+		hidden_effect{
+			every_country = {
+				news_event = EBMTC.11
+			}
+		}
+	}
+}
+
+news_event = {
+
+	id = EBMTC.11
+	title = EBMTC.11.t
+	desc = EBMTC.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBMTC.11.a
+		hidden_effect = {
+			add_stability = 0.01
+		}
+	}
 }
