@@ -167,6 +167,12 @@ country_event = {
 			remove_idea = EBM_tech_centre_idea_civ_focus
 			add_idea = EBM_tech_centre_idea_civ2_focus
 		}
+		hidden_effect = {
+			set_variable = {
+				var = tech_centre_focus_level
+				value = 2
+			}
+		}
 	}
 }
 
@@ -187,7 +193,12 @@ country_event = {
 				value = 1
 				compare = equals
 			}
-			has_idea = EBM_tech_centre_idea_civ2_focus
+			check_variable = {
+				var = tech_centre_focus_level
+				value = 2
+				compare = equals
+			}
+			has_idea = EBM_tech_centre_idea_civ2_focus			
 		}
 	}
 
@@ -197,6 +208,12 @@ country_event = {
 			remove_idea = EBM_tech_centre_idea_civ2_focus
 			add_idea = EBM_tech_centre_idea_civ3a_focus
 		}
+		hidden_effect = {
+			set_variable = {
+				var = tech_centre_focus_level
+				value = 3
+			}
+		}
 	}
 
 	option = {
@@ -205,5 +222,111 @@ country_event = {
 			remove_idea = EBM_tech_centre_idea_civ2_focus
 			add_idea = EBM_tech_centre_idea_civ3b_focus
 		}
+		hidden_effect = {
+			set_variable = {
+				var = tech_centre_focus_level
+				value = 3
+			}
+			set_variable = {
+				var = tech_centre_focus_target
+				value = 1
+				# This is only for civilian targeted focus
+			}
+		}
 	}
+}
+
+# CIVILIAN FOCUSED PRODUCTION EVENT
+# This can be very unbalanced with some mods, we need to focus on balancing after few matches in MP.
+
+country_event = {
+
+	id = EBMTC.7
+	desc = EBMTC.7.d
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	trigger = {
+		date > 1946.1.1
+		AND = {
+			check_variable = {
+				var = tech_centre_focus
+				value = 1
+				compare = equals
+			}
+			check_variable = {
+				var = tech_centre_focus_level
+				value = 3
+				compare = equals
+			}
+			has_idea = EBM_tech_centre_idea_civ3a_focus
+		}
+	}
+
+	option = {
+		name = EBMTC.7.a
+		hidden_effect = {
+			add_stability = -0.25
+			swap_ideas = {
+				remove_idea = EBM_tech_centre_idea_civ3a_focus
+				add_idea = EBM_tech_centre_idea_civ4a_focus
+			}
+			set_variable = {
+				var = tech_centre_focus_level
+				value = 4
+			}
+			every_country = {
+				limit = {
+					if = {
+						AND = {
+							has_idea = EBM_tech_centre_idea_civ4a_focus
+							check_variable = {
+								var = tech_centre_focus_level
+								value = 4
+								compare = equals
+							}
+						}
+						news_event = EBMTC.8
+					}
+					else = {
+						news_event = EBMTC.9
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = EBMTC.8
+	title = EBMTC.8.t
+	desc = EBMTC.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBMTC.8.a
+		hidden_effect = {
+			add_ideas = EBM_tech_centre_idea_civ_unrest
+		}
+	}
+	
+}
+
+news_event = {
+	id = EBMTC.9
+	title = EBMTC.8.t
+	desc = EBMTC.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBMTC.9.a
+		hidden_effect = {
+			add_war_support = 0.05
+		}
+	}
+	
 }

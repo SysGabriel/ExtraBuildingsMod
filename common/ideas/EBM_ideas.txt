@@ -1,5 +1,20 @@
 ideas = {
 	country = {
+ 		# Generic/Start Ideas
+
+		EBM_tech_centre_idea_civ_unrest = {
+			picture = generic_war_preparation # Temp, I'm working right now, I need a picture for that.
+			modifier = {
+				stability_weekly_factor = -0.01
+			}
+
+			allowed_civil_war = { always = yes }
+			allowed = {
+				has_war = yes
+				always = no
+			}
+		}
+
 		EBM_tech_centre_idea_behind = {
 			picture = generic_research_bonus
 			modifier = {
