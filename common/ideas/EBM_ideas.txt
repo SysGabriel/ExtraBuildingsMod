@@ -8,7 +8,7 @@ ideas = {
 				stability_weekly_factor = -0.01
 			}
 
-			allowed_civil_war = { always = yes }
+			allowed_civil_war = { always = no }
 			allowed = {
 				has_war = yes
 				always = no
