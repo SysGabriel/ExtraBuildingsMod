@@ -1,0 +1,20 @@
+buildings = {
+
+	#Research Centre
+	#This structure should be focused on research
+	tech_centre = {
+		
+		base_cost = 100000
+		per_level_extra_cost = 200000
+		max_level = 5 #This can be changed for balancing purposes
+		damage_factor = 2.1
+		value = 10
+		icon_frame = 8
+		show_on_map = 1
+		shares_slots = yes
+		infrastructure_construction_effect = yes
+		
+		research_speed_factor = 0.05		
+	}
+
+}
