@@ -9,7 +9,7 @@ add_namespace = EBMTC_M
 # Create random events from incidents on the building
 
 # First Event
-country_event = { #Try change this to a news event
+country_event = {
 	
 	id = EBMTC.1
 	title = EBMTC.1.t
@@ -29,10 +29,12 @@ country_event = { #Try change this to a news event
  
 	option = {
 		name = EBMTC.1.a
-		add_ideas = EBM_tech_centre_idea_built
-		remove_ideas = EBM_tech_centre_idea_behind
+		swap_ideas = {
+			remove_idea = EBM_tech_centre_idea_behind
+			add_idea = EBM_tech_centre_idea_built
+		}		
 		hidden_effect = {
-			every_country = {
+			every_other_country = {
 				if = {
 					limit = {
 						NOT = {
@@ -59,7 +61,15 @@ news_event = {
 	option = {
 		name = EBMTC.2.a
 		hidden_effect = {
-			add_ideas = EBM_tech_centre_idea_behind
+			if = {
+				limit = {
+					NOT = {
+						has_idea = EBM_tech_centre_idea_behind
+					}
+				}
+				add_ideas = EBM_tech_centre_idea_behind	
+			}
+			
 		}
 	}
 	
@@ -461,6 +471,10 @@ country_event = {
 country_event = {
 	id = EBMTC_M.201
 	desc = "Choosing Military Approach"
+
+	mean_time_to_happen = {
+		days = 90
+	}
 
 	is_triggered_only = yes
 	fire_for_sender = no
