@@ -154,6 +154,7 @@ country_event = {
 country_event = {
 	
 	id = EBMTC.5
+	title = EBMTC.5.t
 	desc = EBMTC.5.d
 
 	mean_time_to_happen = {
@@ -190,6 +191,7 @@ country_event = {
 country_event = {
 	
 	id = EBMTC.6
+	title = EBMTC.6.t
 	desc = EBMTC.6.d
 
 	mean_time_to_happen = {
@@ -253,6 +255,7 @@ country_event = {
 country_event = {
 
 	id = EBMTC.7
+	title = EBMTC.7.t
 	desc = EBMTC.7.d
 
 	mean_time_to_happen = {
@@ -347,6 +350,7 @@ news_event = {
 country_event = {
 	
 	id = EBMTC.10
+	title = EBMTC.10.t
 	desc = EBMTC.10.d
 
 	mean_time_to_happen = {
@@ -377,7 +381,7 @@ country_event = {
 			add_idea = EBM_tech_centre_idea_civ4b_focus
 		}
 		hidden_effect = {
-			every_country = {
+			every_other_country = {
 				news_event = EBMTC.11
 			}
 		}
@@ -406,6 +410,7 @@ news_event = {
 country_event = {
 
 	id = EBMTC_M.1
+	title = EBMTC_M.1.t
 	desc = EBMTC_M.1.d
 
 	mean_time_to_happen = {
@@ -445,6 +450,7 @@ country_event = {
 country_event = {
 
 	id = EBMTC_M.2
+	title = EBMTC_M.2.t
 	desc = EBMTC_M.2.d
 
 	mean_time_to_happen = {
@@ -470,6 +476,7 @@ country_event = {
 
 country_event = {
 	id = EBMTC_M.201
+	title = "Choosing Military Approach"
 	desc = "Choosing Military Approach"
 
 	mean_time_to_happen = {
@@ -478,6 +485,10 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_for_sender = no
+
+	trigger = {
+		has_idea = EBM_tech_centre_idea_milOrg_focus
+	}
 
 	option = {
 		name = "Democratic Intervention"
