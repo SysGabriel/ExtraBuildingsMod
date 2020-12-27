@@ -23,6 +23,19 @@ country_event = {
 		tech_centre > 0
 		NOT = {
 			has_idea = EBM_tech_centre_idea_built
+			has_idea = EBM_tech_centre_idea_civ_focus
+			has_idea = EBM_tech_centre_idea_civ2_focus
+			has_idea = EBM_tech_centre_idea_civ3a_focus
+			has_idea = EBM_tech_centre_idea_civ3b_focus
+			has_idea = EBM_tech_centre_idea_civ4a_focus
+			has_idea = EBM_tech_centre_idea_civ4b_focus
+			has_idea = EBM_tech_centre_idea_milOrg_focus
+			has_idea = EBM_tech_centre_idea_milOrgNeu_focus
+			has_idea = EBM_tech_centre_idea_milOrgFas_focus
+			has_idea = EBM_tech_centre_idea_milOrgDem_focus
+			has_idea = EBM_tech_centre_idea_milOrgCom_focus
+			has_idea = EBM_tech_centre_idea_milProd_focus
+			has_idea = EBM_tech_centre_idea_spy_focus
 		}
 		
 	}
@@ -33,6 +46,10 @@ country_event = {
 			remove_idea = EBM_tech_centre_idea_behind
 			add_idea = EBM_tech_centre_idea_built
 		}		
+		set_variable = {
+			var = tech_centre_focus
+			value = 0
+		}
 		hidden_effect = {
 			every_other_country = {
 				if = {
@@ -100,17 +117,24 @@ country_event = {
 	desc = EBMTC.4.d
 	
 	mean_time_to_happen = {
-		months = 3	
+		months = 1	
 	}
 
 	trigger = {
 		date > 1940.1.1
 		has_idea = EBM_tech_centre_idea_built
 		NOT = {
-			has_idea = EBM_tech_centre_idea_civ_focus
-			has_idea = EBM_tech_centre_idea_milOrg_focus
-			has_idea = EBM_tech_centre_idea_milProd_focus
-			has_idea = EBM_tech_centre_idea_spy_focus
+			OR ={
+				has_idea = EBM_tech_centre_idea_civ_focus
+				has_idea = EBM_tech_centre_idea_milOrg_focus
+				has_idea = EBM_tech_centre_idea_milProd_focus
+				has_idea = EBM_tech_centre_idea_spy_focus
+				check_variable = {
+					var = tech_centre_focus
+					value = 0
+					compare = not_equals
+				}
+			}
 		}
 	}
 
@@ -122,7 +146,10 @@ country_event = {
 				var = tech_centre_focus
 				value = 1
 			}
-			add_ideas = EBM_tech_centre_idea_civ_focus
+			swap_ideas = {
+				remove_idea = EBM_tech_centre_idea_built
+				add_idea = EBM_tech_centre_idea_civ_focus
+			}
 		}
 	}
 
@@ -143,7 +170,10 @@ country_event = {
 				var = tech_centre_focus
 				value = 3
 			}
-			add_ideas = EBM_tech_centre_idea_spy_focus
+			swap_ideas = {
+				remove_idea = EBM_tech_centre_idea_built
+				add_idea = EBM_tech_centre_idea_spy_focus
+			}
 		}
 	}
 
@@ -158,17 +188,19 @@ country_event = {
 	desc = EBMTC.5.d
 
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 
 	trigger = {
 		date > 1942.1.1
 		AND = {
-			check_variable = {
-				var = tech_centre_focus
-				value = 1
-				compare = equals
-			}
+			NOT = {
+				check_variable = {
+					var = tech_centre_focus
+					value = 1
+					compare = not_equals
+				}
+			}			
 			has_idea = EBM_tech_centre_idea_civ_focus
 		}
 	}
@@ -195,17 +227,19 @@ country_event = {
 	desc = EBMTC.6.d
 
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 
 	trigger = {
 		date > 1944.1.1
 		AND = {
-			check_variable = {
-				var = tech_centre_focus
-				value = 1
-				compare = equals
-			}
+			NOT = {
+				check_variable = {
+					var = tech_centre_focus
+					value = 1
+					compare = not_equals
+				}
+			}	
 			check_variable = {
 				var = tech_centre_focus_level
 				value = 2
@@ -259,17 +293,19 @@ country_event = {
 	desc = EBMTC.7.d
 
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 
 	trigger = {
 		date > 1946.1.1
 		AND = {
-			check_variable = {
-				var = tech_centre_focus
-				value = 1
-				compare = equals
-			}
+			NOT = {
+				check_variable = {
+					var = tech_centre_focus
+					value = 1
+					compare = not_equals
+				}
+			}	
 			check_variable = {
 				var = tech_centre_focus_level
 				value = 3
@@ -354,12 +390,19 @@ country_event = {
 	desc = EBMTC.10.d
 
 	mean_time_to_happen = {
-		months = 6
+		months = 1
 	}
 
 	trigger = {
 		date > 1946.1.1
 		AND = {
+			NOT = {
+				check_variable = {
+					var = tech_centre_focus
+					value = 1
+					compare = not_equals
+				}
+			}	
 			has_idea = EBM_tech_centre_idea_civ3b_focus
 			check_variable = {
 				var = tech_centre_focus_level
@@ -414,20 +457,25 @@ country_event = {
 	desc = EBMTC_M.1.d
 
 	mean_time_to_happen = {
-		days = 30
+		days = 10
 	}
 
 	trigger = {
-		check_variable = {
-			var = tech_centre_focus_level
-			value = 2
-			compare = equals
-		}
+		NOT = {
+			check_variable = {
+				var = tech_centre_focus
+				value = 2
+				compare = not_equals
+			}
+		}	
 	}
 
 	option = {
 		name = EBMTC_M.1.a
-		add_ideas = EBM_tech_centre_idea_milOrg_focus
+		swap_ideas = {
+			remove_idea = EBM_tech_centre_idea_built
+			add_idea = EBM_tech_centre_idea_milOrg_focus
+		}
 		set_variable = {
 			var = tech_centre_mil_focus
 			value = 1
@@ -436,7 +484,10 @@ country_event = {
 
 	option = {
 		name = EBMTC_M.1.b
-		add_ideas = EBM_tech_centre_idea_milProd_focus
+		swap_ideas = {
+			remove_idea = EBM_tech_centre_idea_built
+			add_idea = EBM_tech_centre_idea_milProd_focus
+		}
 		set_variable = {
 			var = tech_centre_mil_focus
 			value = 2
@@ -458,6 +509,13 @@ country_event = {
 	}
 
 	trigger = {
+		NOT = {
+			check_variable = {
+				var = tech_centre_focus
+				value = 2
+				compare = not_equals
+			}
+		}	
 		check_variable = {
 			var = tech_centre_mil_focus
 			value = 1
@@ -487,6 +545,13 @@ country_event = {
 	fire_for_sender = no
 
 	trigger = {
+		NOT = {
+			check_variable = {
+				var = tech_centre_focus
+				value = 2
+				compare = not_equals
+			}
+		}	
 		has_idea = EBM_tech_centre_idea_milOrg_focus
 	}
 
