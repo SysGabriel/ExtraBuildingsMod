@@ -1,303 +1,90 @@
 ideas = {
 	country = {
- 		# Generic/Start Ideas
-
-		EBM_tech_centre_idea_civ_unrest = {
-			picture = generic_war_preparation # Temp, I'm working right now, I need a picture for that.
-			modifier = {
-				stability_weekly_factor = -0.01
-			}
-
-			allowed_civil_war = { always = no }
-			allowed = {
-				has_war = yes
-				always = no
-			}
-		}
-
-		EBM_tech_centre_idea_behind = {
+		# ===============================================
+		# Tech Centre
+		# ===============================================
+		# Generic / Start Idea
+		# ===============================================
+		EBM_tech_centre_default = {
 			picture = generic_research_bonus
 			modifier = {
-				production_speed_tech_centre_factor = 0.5
-				ai_badass_factor = 1
-			}
-
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-				always = no
-			}
-
-		}
-
-		EBM_tech_centre_idea_built = {
-			picture = jap_duplicate_research
-			modifier = {
-				research_speed_factor = 0.25
-				production_speed_infrastructure_factor = 0.5
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				local_resources_factor = 0.05
+				army_org = 5
+				army_attack_factor = 0.05
+				experience_gain_army = 0.0001
 			}
 
 			on_add = {
 				add_research_slot = 1
 			}
 
+			allowed = {	always = yes }
 			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-				always = no
-			}
 		}
-
-		# Civilian Ideas
-
-		EBM_tech_centre_idea_civ_focus = {
+		# ===============================================
+		# Civil Ideas - Start
+		# ===============================================
+		EBM_tech_centre_civil = {
 			picture = generic_build_infrastructure
 			modifier = {
-				production_speed_buildings_factor = 0.25
-				research_speed_factor = 0.25
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.15
 			}
 
 			on_add = {
-				add_stability = 0.5
+				add_stability = 0.1
 			}
 
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
+			allowed = {	always = yes }
+			allowed_civil_war = { always = yes }			
 		}
-
-		EBM_tech_centre_idea_civ2_focus = {
-			picture = generic_build_infrastructure
+		# ===============================================
+		# Civil Ideas - Production Increase
+		# ===============================================
+		EBM_tech_centre_civil_production = {
+			picture = civilian_economy
 			modifier = {
-				production_factory_start_efficiency_factor = 0.8
-				production_speed_buildings_factor = 0.5
-				research_speed_factor = 0.25
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.15
+				production_factory_max_efficiency_factor = 0.30
+				production_factory_efficiency_gain_factor = 2
 			}
 
-			allowed_civil_war = { always = yes }
-			allowed = {
-				has_war = yes
-			}
+			allowed = {	always = yes }
+			allowed_civil_war = { always = yes }	
 		}
-
-		EBM_tech_centre_idea_civ3a_focus = {
-			picture = generic_build_infrastructure
+		# ===============================================
+		# Civil Ideas - Resource Efficiency Gain
+		# ===============================================
+		EBM_tech_centre_civil_resource = {
+			picture = generic_production_bonus
 			modifier = {
-				production_factory_start_efficiency_factor = 1
-				production_speed_buildings_factor = 0.75
-				research_speed_factor = 0.25
-				consumer_goods_factor = 0.05
-			}
-
-			allowed_civil_war = { always = yes }
-			allowed = {
-				has_war = yes
-			}
-		}
-
-		EBM_tech_centre_idea_civ3b_focus = {
-			picture = generic_build_infrastructure
-			modifier = {
-				production_factory_start_efficiency_factor = 0.5
-				production_speed_buildings_factor = 0.5
-				research_speed_factor = 0.25
-				consumer_goods_factor = -0.05
-			}
-
-			allowed_civil_war = { always = yes }
-			allowed = {
-				has_war = yes
-			}
-		}
-
-		EBM_tech_centre_idea_civ4a_focus = {
-			picture = generic_build_infrastructure
-			modifier = {
-				production_factory_start_efficiency_factor = 1
-				production_speed_buildings_factor = 1.25
-				research_speed_factor = 0.25
-				consumer_goods_factor = 0.1
-				min_export = -0.05
+				research_speed_factor = 0.15
 				local_resources_factor = 0.25
+				production_speed_buildings_factor = 0.2
 			}
 
+			allowed = {	always = yes }
 			allowed_civil_war = { always = yes }
-			allowed = {
-				has_war = yes
-			}
 		}
-
-		#Best Idea to reach, however, I need to create some conditions to met, before giving this to a nation
-		EBM_tech_centre_idea_civ4b_focus = {
-			picture = generic_build_infrastructure
-			modifier = {
-				production_factory_start_efficiency_factor = 0.5
-				production_speed_buildings_factor = 0.5
-				research_speed_factor = 0.25
-				consumer_goods_factor = -0.1
-				min_export = 0.05
-				stability_weekly_factor = 0.025
-				monthly_population = 2
-				local_resources_factor = -0.15
-				neutrality_drift = 0.5
-				neutrality_acceptance = 50
-			}
-
-			allowed_civil_war = { always = yes }
-			allowed = {
-				has_war = yes
-			}
-		}
-
+		# ===============================================
 		# Military Ideas
-
-		EBM_tech_centre_idea_milOrg_focus = {
+		# ===============================================
+		EBM_tech_centre_military = {
 			picture = generic_war_preparation
 			modifier = {
-				army_org_factor = 0.5
-				max_planning_factor = 0.5
-				conscription = 0.025
-				research_speed_factor = 0.25
+				army_org = 10
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				experience_gain_army = 0.0005
 			}
 
-			on_add = {
-				add_war_support = 0.5
-				add_stability = -0.1
-			}
-			
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
+			allowed = {	always = yes }
+			allowed_civil_war = { always = yes } 
 		}
-
-		EBM_tech_centre_idea_milOrgNeu_focus = {
-			picture = generic_war_preparation
-			modifier = {
-				army_org_factor = 1
-				max_planning_factor = 0.5
-				conscription = 0.005
-				research_speed_factor = 0.25
-			}
-
-			on_add = {
-				#add_war_support = 0.5
-				add_stability = -0.1
-			}
-			
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
-		}
-
-		EBM_tech_centre_idea_milOrgDem_focus = {
-			picture = generic_war_preparation
-			modifier = {
-				army_org_factor = 1.5
-				max_planning_factor = -0.25
-				conscription = 0.030
-				research_speed_factor = 0.25
-			}
-
-			on_add = {
-				#add_war_support = 0.5
-				add_stability = -0.1
-			}
-			
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
-		}
-
-		EBM_tech_centre_idea_milOrgFas_focus = {
-			picture = generic_war_preparation
-			modifier = {
-				army_org_factor = 0.25
-				max_planning_factor = 0.75
-				conscription = 0.1
-				research_speed_factor = 0.25
-			}
-
-			on_add = {
-				#add_war_support = 0.5
-				add_stability = -0.1
-			}
-			
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
-		}
-
-		EBM_tech_centre_idea_milOrgCom_focus = {
-			picture = generic_war_preparation
-			modifier = {
-				army_org_factor = 0.25
-				max_planning_factor = 0.25
-				conscription = 0.15
-				research_speed_factor = 0.25
-			}
-
-			on_add = {
-				#add_war_support = 0.5
-				add_stability = -0.1
-			}
-			
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
-		}
-
-		EBM_tech_centre_idea_milProd_focus = {
-			picture = generic_war_preparation
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.5
-				production_factory_max_efficiency_factor = 0.25
-				production_factory_start_efficiency_factor = 0.25
-				production_speed_arms_factory_factor = 1
-				research_speed_factor = 0.25
-			}
-
-			on_add = {
-				
-			}
-			
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
-		}
-
-		#Espionage Ideas
-
-		EBM_tech_centre_idea_spy_focus = {
-			picture = generic_secret_police
-			modifier = {
-				operative_slot = 2
-				operation_cost = -0.5
-				operation_risk = -0.25
-				foreign_subversive_activites = -0.5
-				agency_upgrade_time = -0.5
-				civilian_intel_factor = 0.5
-			}
-			
-			allowed_civil_war = { always = yes }
-			allowed = {	
-				has_war = yes 
-			}
-			
-		}
-
 	}
 }
