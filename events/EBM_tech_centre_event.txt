@@ -1,0 +1,147 @@
+add_namespace = EBM_TC
+
+country_event = {
+	id = EBM_TC.1
+	title = EBM_TC.1.t
+	desc = EBM_TC.1.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		tech_centre > 0
+		NOT = {
+			has_idea = EBM_tech_centre_default
+			has_idea = EBM_tech_centre_civil
+			has_idea = EBM_tech_centre_civil_production
+			has_idea = EBM_tech_centre_civil_resource
+			has_idea = EBM_tech_centre_espionage
+			has_idea = EBM_tech_centre_espionage_ops
+			has_idea = EBM_tech_centre_espionage_spy
+			has_idea = EBM_tech_centre_military
+			has_idea = EBM_tech_centre_military_attack
+			has_idea = EBM_tech_centre_military_defense
+			has_idea = EBM_tech_centre_military_organization
+		}
+	}
+
+	option = {
+		name = EBM_TC.1.a
+		add_ideas = EBM_tech_centre_default
+	}
+}
+
+country_event = {
+	id = EBM_TC.10
+	title = EBM_TC.10.t
+	desc = EBM_TC.10.d
+
+	trigger = {
+		tech_centre > 0
+		has_idea = EBM_tech_centre_default
+	}
+
+	option = {
+		name = EBM_TC.10.a
+		swap_ideas = {
+			add_idea = EBM_tech_centre_civil
+			remove_idea = EBM_tech_centre_default
+		}
+	}
+
+	option = {
+		name = EBM_TC.10.b
+		swap_ideas = {
+			add_idea = EBM_tech_centre_military
+			remove_idea = EBM_tech_centre_default
+		}
+	}
+
+	option = {
+		name = EBM_TC.10.c
+		swap_ideas = {
+			add_idea = EBM_tech_centre_espionage
+			remove_idea = EBM_tech_centre_default
+		}
+	}
+}
+
+news_event = {
+	id = EBM_TC.1000
+	title = EBM_TC.1000.t
+	desc = EBM_TC.1000.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBM_TC.1000.a
+		add_war_support = -0.05
+		trigger = {
+			tech_centre > 0
+		}		
+	}
+
+	option = {
+		name = EBM_TC.1000.b
+		trigger = {
+			tech_centre < 0
+		}		
+	}
+}
+
+country_event = {
+	id = EBM_TC.101
+	title = EBM_TC.101.t
+	desc = EBM_TC.101.d
+
+	trigger = {
+		tech_centre > 0
+		has_idea = EBM_tech_centre_civil
+	}
+
+	option = {
+		name = EBM_TC.101.a
+		swap_ideas = {
+			add_idea = EBM_tech_centre_civil_production
+			remove_idea = EBM_tech_centre_civil
+		}
+		every_other_country = {
+			news_event = EBM_TC.1010
+		}		
+	}
+
+	option = {
+		name = EBM_TC.101.b
+		swap_ideas = {
+			add_idea = EBM_tech_centre_civil_resource
+			remove_idea = EBM_tech_centre_civil
+		}
+		every_other_country = {
+			news_event = EBM_TC.1010
+		}
+	}
+}
+
+news_event = {
+	id = EBM_TC.1010
+	title = EBM_TC.1010.t
+	desc = EBM_TC.1010.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBM_TC.1010.a
+		add_stability = -0.05
+		trigger = {
+			tech_centre > 0
+		}		
+	}
+
+	option = {
+		name = EBM_TC.1010.b
+		trigger = {
+			tech_centre < 0
+		}		
+	}
+}
