@@ -4,3 +4,4 @@ tags={
 }
 name="Extra Buildings"
 supported_version="1.10.*"
+remote_file_id="2332336936"
