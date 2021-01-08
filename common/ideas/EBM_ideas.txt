@@ -193,7 +193,7 @@ ideas = {
 		# ===============================================
 		# Espionage Ideas - Improve our Intelligence
 		# ===============================================
-		EBM_tech_centre_espionage_spy = {
+		EBM_tech_centre_espionage_intel = {
 			picture = generic_spy_intel
 			modifier = {
 				civilian_intel_factor = 0.25

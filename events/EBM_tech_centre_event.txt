@@ -37,6 +37,10 @@ country_event = {
 	title = EBM_TC.10.t
 	desc = EBM_TC.10.d
 
+	mean_time_to_happen = {
+		days = 150
+	}
+	
 	trigger = {
 		tech_centre > 0
 		has_idea = EBM_tech_centre_default
@@ -78,14 +82,14 @@ news_event = {
 		name = EBM_TC.1000.a
 		add_war_support = -0.05
 		trigger = {
-			tech_centre > 0
+			tech_centre < 0
 		}		
 	}
 
 	option = {
 		name = EBM_TC.1000.b
 		trigger = {
-			tech_centre < 0
+			tech_centre > 0
 		}		
 	}
 }
@@ -94,6 +98,10 @@ country_event = {
 	id = EBM_TC.101
 	title = EBM_TC.101.t
 	desc = EBM_TC.101.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
 
 	trigger = {
 		tech_centre > 0
@@ -134,14 +142,14 @@ news_event = {
 		name = EBM_TC.1010.a
 		add_stability = -0.05
 		trigger = {
-			tech_centre > 0
+			tech_centre < 0
 		}		
 	}
 
 	option = {
 		name = EBM_TC.1010.b
 		trigger = {
-			tech_centre < 0
+			tech_centre > 0
 		}		
 	}
 }
