@@ -1,5 +1,9 @@
 add_namespace = EBM_TC
 
+
+# ==========================================================================
+# Start Events
+# ==========================================================================
 country_event = {
 	id = EBM_TC.1
 	title = EBM_TC.1.t
@@ -64,6 +68,9 @@ country_event = {
 
 	option = {
 		name = EBM_TC.10.c
+		trigger = {
+			has_dlc = "La Resistance"
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_espionage
 			remove_idea = EBM_tech_centre_default
@@ -82,7 +89,7 @@ news_event = {
 		name = EBM_TC.1000.a
 		add_war_support = -0.05
 		trigger = {
-			tech_centre < 0
+			tech_centre < 1
 		}		
 	}
 
@@ -93,6 +100,11 @@ news_event = {
 		}		
 	}
 }
+
+
+# ==========================================================================
+# Civlian Focused Events
+# ==========================================================================
 
 country_event = {
 	id = EBM_TC.101
@@ -142,12 +154,162 @@ news_event = {
 		name = EBM_TC.1010.a
 		add_stability = -0.05
 		trigger = {
-			tech_centre < 0
+			tech_centre < 1
 		}		
 	}
 
 	option = {
 		name = EBM_TC.1010.b
+		trigger = {
+			tech_centre > 0
+		}		
+	}
+}
+
+# ==========================================================================
+# Military Focused Events
+# ==========================================================================
+
+country_event = {
+	id = EBM_TC.102
+	title = EBM_TC.102.t 
+	desc = EBM_TC.102.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	trigger = {
+		tech_centre > 0
+		has_idea = EBM_tech_centre_military
+	}
+
+	option = {
+		name = EBM_TC.102.a
+		swap_ideas = {
+			add_idea = EBM_tech_centre_military_organization
+			remove_idea = EBM_tech_centre_military
+		}
+		every_other_country = {
+			news_event = EBM_TC.1020
+		}		
+	}
+
+	option = {
+		name = EBM_TC.102.b
+		swap_ideas = {
+			add_idea = EBM_tech_centre_military_attack
+			remove_idea = EBM_tech_centre_military
+		}
+		every_other_country = {
+			news_event = EBM_TC.1020
+		}
+	}
+
+	option = {
+		name = EBM_TC.102.c
+		swap_ideas = {
+			add_idea = EBM_tech_centre_military_defense
+			remove_idea = EBM_tech_centre_military
+		}
+		every_other_country = {
+			news_event = EBM_TC.1020
+		}
+	}
+}
+
+news_event = {
+	id = EBM_TC.1020
+	title = EBM_TC.1020.t
+	desc = EBM_TC.1020.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBM_TC.1020.a
+		add_war_support = -0.1
+		trigger = {
+			tech_centre < 1
+		}		
+	}
+
+	option = {
+		name = EBM_TC.1020.b
+		trigger = {
+			tech_centre > 0
+		}		
+	}
+}
+
+# ==========================================================================
+# Espionage Focused Events
+# ==========================================================================
+
+country_event = {
+	id = EBM_TC.103
+	title = EBM_TC.103.t
+	desc = EBM_TC.103.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	trigger = {
+		tech_centre > 0
+		has_idea = EBM_tech_centre_espionage
+	}
+
+	option = {
+		name = EBM_TC.103.a
+		swap_ideas = {
+			add_idea = EBM_tech_centre_espionage_ops
+			remove_idea = EBM_tech_centre_espionage
+		}
+		every_other_country = {
+			news_event = EBM_TC.1020
+		}		
+	}
+
+	option = {
+		name = EBM_TC.103.b
+		swap_ideas = {
+			add_idea = EBM_tech_centre_espionage_spy
+			remove_idea = EBM_tech_centre_espionage
+		}
+		every_other_country = {
+			news_event = EBM_TC.1020
+		}
+	}
+
+	option = {
+		name = EBM_TC.103.c
+		swap_ideas = {
+			add_idea = EBM_tech_centre_espionage_intel
+			remove_idea = EBM_tech_centre_espionage
+		}
+		every_other_country = {
+			news_event = EBM_TC.1030
+		}
+	}
+}
+
+news_event = {
+	id = EBM_TC.1030
+	title = EBM_TC.1030.t
+	desc = EBM_TC.1030.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = EBM_TC.1030.a
+		add_political_power = -1000
+		trigger = {
+			tech_centre < 1
+		}		
+	}
+
+	option = {
+		name = EBM_TC.1030.b
 		trigger = {
 			tech_centre > 0
 		}		
