@@ -11,4 +11,4 @@ This version has the following additions
 > 11 - Ideas
 
 # Compatibility note
-Currently during the tests, it's compatible with any mods at the moment.
+Not compatible with Black ICE mod
