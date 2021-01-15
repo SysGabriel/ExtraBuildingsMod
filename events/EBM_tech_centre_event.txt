@@ -52,6 +52,18 @@ country_event = {
 
 	option = {
 		name = EBM_TC.10.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				is_in_faction = yes
+				add = 5
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+			factor = 1
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_civil
 			remove_idea = EBM_tech_centre_default
@@ -60,6 +72,14 @@ country_event = {
 
 	option = {
 		name = EBM_TC.10.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_war = yes
+				add = 5
+			}
+			factor = 1
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_military
 			remove_idea = EBM_tech_centre_default
@@ -70,6 +90,10 @@ country_event = {
 		name = EBM_TC.10.c
 		trigger = {
 			has_dlc = "La Resistance"
+		}
+		ai_chance = {
+			base = 0
+			factor = 0
 		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_espionage
@@ -122,6 +146,18 @@ country_event = {
 
 	option = {
 		name = EBM_TC.101.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				democratic > 80
+				add = 5
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+			factor = 1
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_civil_production
 			remove_idea = EBM_tech_centre_civil
@@ -133,6 +169,18 @@ country_event = {
 
 	option = {
 		name = EBM_TC.101.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				communism > 80
+				add = 5
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+			factor = 1
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_civil_resource
 			remove_idea = EBM_tech_centre_civil
@@ -186,6 +234,18 @@ country_event = {
 
 	option = {
 		name = EBM_TC.102.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				fascism > 80
+				add = 5
+			}
+			modifier = {
+				has_war = yes
+				add = 5
+			}
+			factor = 1
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_military_organization
 			remove_idea = EBM_tech_centre_military
@@ -197,6 +257,18 @@ country_event = {
 
 	option = {
 		name = EBM_TC.102.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				communism > 80
+				add = 5
+			}
+			modifier = {
+				has_war = yes
+				add = 5
+			}
+			factor = 1
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_military_attack
 			remove_idea = EBM_tech_centre_military
@@ -208,6 +280,18 @@ country_event = {
 
 	option = {
 		name = EBM_TC.102.c
+		ai_chance = {
+			base = 5
+			modifier = {
+				democratic > 80
+				add = 10
+			}
+			modifier = {
+				has_defensive_war = yes
+				add = 10
+			}
+			factor = 1
+		}
 		swap_ideas = {
 			add_idea = EBM_tech_centre_military_defense
 			remove_idea = EBM_tech_centre_military
