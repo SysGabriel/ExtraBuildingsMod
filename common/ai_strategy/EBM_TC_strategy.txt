@@ -1,0 +1,13 @@
+EBM_TC_build = {
+	enable = {
+		tech_centre < 1
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = tech_centre
+		value = 1
+	}
+
+	
+}

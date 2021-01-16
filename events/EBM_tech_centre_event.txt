@@ -56,7 +56,7 @@ country_event = {
 			base = 5
 			modifier = {
 				is_in_faction = yes
-				add = 5
+				factor = 0
 			}
 			modifier = {
 				has_war = yes
@@ -68,6 +68,9 @@ country_event = {
 			add_idea = EBM_tech_centre_civil
 			remove_idea = EBM_tech_centre_default
 		}
+		every_other_country = {
+			news_event = EBM_TC.1000
+		}	
 	}
 
 	option = {
@@ -76,7 +79,7 @@ country_event = {
 			base = 5
 			modifier = {
 				has_war = yes
-				add = 5
+				add = 15
 			}
 			factor = 1
 		}
@@ -84,6 +87,9 @@ country_event = {
 			add_idea = EBM_tech_centre_military
 			remove_idea = EBM_tech_centre_default
 		}
+		every_other_country = {
+			news_event = EBM_TC.1000
+		}	
 	}
 
 	option = {
@@ -99,6 +105,9 @@ country_event = {
 			add_idea = EBM_tech_centre_espionage
 			remove_idea = EBM_tech_centre_default
 		}
+		every_other_country = {
+			news_event = EBM_TC.1000
+		}	
 	}
 }
 
@@ -264,8 +273,8 @@ country_event = {
 				add = 5
 			}
 			modifier = {
-				has_war = yes
-				add = 5
+				has_offensive_war = yes
+				add = 15
 			}
 			factor = 1
 		}
@@ -288,7 +297,7 @@ country_event = {
 			}
 			modifier = {
 				has_defensive_war = yes
-				add = 10
+				add = 15
 			}
 			factor = 1
 		}
@@ -350,7 +359,7 @@ country_event = {
 			remove_idea = EBM_tech_centre_espionage
 		}
 		every_other_country = {
-			news_event = EBM_TC.1020
+			news_event = EBM_TC.1030
 		}		
 	}
 
@@ -361,7 +370,7 @@ country_event = {
 			remove_idea = EBM_tech_centre_espionage
 		}
 		every_other_country = {
-			news_event = EBM_TC.1020
+			news_event = EBM_TC.1030
 		}
 	}
 
