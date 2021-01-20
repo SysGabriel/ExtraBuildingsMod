@@ -210,5 +210,167 @@ ideas = {
 			allowed = {	always = yes }
 			allowed_civil_war = { always = yes }
 		}
+		
+		# ===============================================
+		# Military School
+		# ===============================================
+		# Generic / Start Idea
+		# ===============================================
+		EBM_military_school_default = {
+			picture = generic_war_preparation
+			modifier = {
+				minimum_training_level = 3
+				training_time_army_factor = -0.1
+				conscription = 0.05
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}		
+		
+		# ===============================================
+		# Choose Focus Phase
+		# ===============================================
+		EBM_military_school_experience = {
+			picture = generic_war_preparation
+			modifier = {
+				experience_gain_army = 0.01
+				experience_gain_navy = 0.01
+				experience_gain_air = 0.01
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		EBM_military_school_training = {
+			picture = generic_war_preparation
+			modifier = {
+				minimum_training_level = 3
+				training_time_army_factor = -0.25
+				training_time_factor = -0.25
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		EBM_military_school_mobilization = {
+			picture = generic_war_preparation
+			modifier = {
+				conscription = 0.1
+				production_factory_max_efficiency_factor = 0.25
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		# ===============================================
+		# Experience Focus
+		# ===============================================
+		EBM_military_school_experience_army = {
+			picture = generic_war_preparation
+			modifier = {
+				experience_gain_army = 0.1
+				experience_gain_navy = 0.01
+				experience_gain_air = 0.01
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		EBM_military_school_experience_navy = {
+			picture = generic_war_preparation
+			modifier = {
+				experience_gain_army = 0.01
+				experience_gain_navy = 0.1
+				experience_gain_air = 0.01
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		EBM_military_school_experience_air = {
+			picture = generic_war_preparation
+			modifier = {
+				experience_gain_army = 0.01
+				experience_gain_navy = 0.01
+				experience_gain_air = 0.1
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		# ===============================================
+		# Training Focus
+		# ===============================================
+		EBM_military_school_training_time = {
+			picture = generic_war_preparation
+			modifier = {
+				training_time_army_factor = -0.5
+				training_time_factor = -0.5
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		EBM_military_school_training_efficiency = {
+			picture = generic_war_preparation
+			modifier = {
+				minimum_training_level = 4
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		# ===============================================
+		# Mobilization Focus
+		# ===============================================
+		EBM_military_school_mobilization_factory = {
+			picture = generic_war_preparation
+			modifier = {
+				production_factory_max_efficiency_factor = 0.25
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		EBM_military_school_mobilization_conscription = {
+			picture = generic_war_preparation
+			modifier = {
+				conscription = 0.2
+				weekly_manpower = 5000
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+				
+		# ===============================================
+		# Military School
+		# ===============================================
+		# Generic / Start Idea
+		# ===============================================
+		EBM_bank_default = {
+			picture = generic_war_preparation
+			modifier = {
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				
+			}
+			
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}		
 	}
 }
