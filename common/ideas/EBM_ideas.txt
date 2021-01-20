@@ -210,6 +210,30 @@ ideas = {
 			allowed = {	always = yes }
 			allowed_civil_war = { always = yes }
 		}
+
+		# ===============================================
+		# Military School
+		# ===============================================
+		# Generic / Start Idea
+		# ===============================================
+		EBM_military_school_default = {
+			picture = generic_war_preparation
+			modifier = {
+				army_org = 5
+				army_org_Factor = 0.1
+				army_speed_factor = 0.1
+				experience_gain_army = 0.01
+				experience_gain_navy = 0.1
+				training_time_army_factor = -0.1
+				minimum_training_level = 3
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_dockyard = 0.25
+				industrial_capacity_factory = 0.25
+			}
+
+			allowed = {	always = yes }
+			allowed_civil_war = { always = yes }
+		}
 		
 		# ===============================================
 		# Military School

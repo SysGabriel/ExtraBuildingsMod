@@ -31,9 +31,9 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		experience_army_gain = 0.001
-		experience_navy_gain = 0.01
-		experience_navy_gain = 0.01
+		experience_gain_army = 0.001
+		experience_gain_navy = 0.001
+		experience_gain_air = 0.001
 		conscription = 0.001
 		
 	}
