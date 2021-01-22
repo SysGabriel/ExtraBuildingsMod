@@ -16,12 +16,8 @@ ideas = {
 				experience_gain_army = 0.0001
 			}
 
-			on_add = {
-				add_research_slot = 1
-			}
-
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -40,8 +36,8 @@ ideas = {
 				add_stability = 0.1
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }			
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }			
 		}
 
 		# ===============================================
@@ -56,8 +52,8 @@ ideas = {
 				production_factory_efficiency_gain_factor = 2
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }	
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -71,8 +67,8 @@ ideas = {
 				production_speed_buildings_factor = 0.2
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -88,8 +84,8 @@ ideas = {
 				research_speed_factor = 0.1
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes } 
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -110,8 +106,8 @@ ideas = {
 				experience_gain_army = 0.001
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes } 
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -128,8 +124,8 @@ ideas = {
 				experience_gain_army = 0.001
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes } 
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -147,8 +143,8 @@ ideas = {
 				experience_gain_army = 0.001
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes } 
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -161,8 +157,8 @@ ideas = {
 				operation_risk = -0.05
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -176,8 +172,8 @@ ideas = {
 				operation_rescue_operative_risk	= -0.25
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 
 		# ===============================================
@@ -191,8 +187,8 @@ ideas = {
 				intelligence_agency_defense = 0.01
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 		
 		# ===============================================
@@ -207,32 +203,8 @@ ideas = {
 				airforce_intel_factor = 0.25
 			}
 
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }
-		}
-
-		# ===============================================
-		# Military School
-		# ===============================================
-		# Generic / Start Idea
-		# ===============================================
-		EBM_military_school_default = {
-			picture = generic_war_preparation
-			modifier = {
-				army_org = 5
-				army_org_Factor = 0.1
-				army_speed_factor = 0.1
-				experience_gain_army = 0.01
-				experience_gain_navy = 0.1
-				training_time_army_factor = -0.1
-				minimum_training_level = 3
-				production_factory_max_efficiency_factor = 0.1
-				industrial_capacity_dockyard = 0.25
-				industrial_capacity_factory = 0.25
-			}
-
-			allowed = {	always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	tech_centre > 0 }
+			allowed_civil_war = { tech_centre > 0 }
 		}
 		
 		# ===============================================
@@ -243,13 +215,16 @@ ideas = {
 		EBM_military_school_default = {
 			picture = generic_war_preparation
 			modifier = {
-				minimum_training_level = 3
 				training_time_army_factor = -0.1
 				conscription = 0.05
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			on_add = {
+				add_political_power = 50
+			}
+
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}		
 		
 		# ===============================================
@@ -263,20 +238,21 @@ ideas = {
 				experience_gain_air = 0.01
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		EBM_military_school_training = {
 			picture = generic_war_preparation
 			modifier = {
-				minimum_training_level = 3
-				training_time_army_factor = -0.25
-				training_time_factor = -0.25
+				training_time_army_factor = -0.12
+				training_time_factor = -0.12
+				army_attack_factor = 0.12
+				army_defence_factor = 0.12
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		EBM_military_school_mobilization = {
@@ -286,8 +262,8 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.25
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		# ===============================================
@@ -301,8 +277,8 @@ ideas = {
 				experience_gain_air = 0.01
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		EBM_military_school_experience_navy = {
@@ -313,8 +289,8 @@ ideas = {
 				experience_gain_air = 0.01
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		EBM_military_school_experience_air = {
@@ -325,8 +301,8 @@ ideas = {
 				experience_gain_air = 0.1
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		# ===============================================
@@ -335,22 +311,23 @@ ideas = {
 		EBM_military_school_training_time = {
 			picture = generic_war_preparation
 			modifier = {
-				training_time_army_factor = -0.5
-				training_time_factor = -0.5
+				training_time_army_factor = -0.25
+				training_time_factor = -0.25
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		EBM_military_school_training_efficiency = {
 			picture = generic_war_preparation
 			modifier = {
-				minimum_training_level = 4
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		# ===============================================
@@ -364,8 +341,8 @@ ideas = {
 				industrial_capacity_dockyard = 0.25
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}
 		
 		EBM_military_school_mobilization_conscription = {
@@ -375,26 +352,8 @@ ideas = {
 				weekly_manpower = 5000
 			}
 			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-		}
-				
-		# ===============================================
-		# Bank
-		# ===============================================
-		# Generic / Start Idea
-		# ===============================================
-		EBM_bank_default = {
-			picture = generic_war_preparation
-			modifier = {
-				political_power_gain = 0.1
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
-				
-			}
-			
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
+			allowed = {	military_school > 0 }
+			allowed_civil_war = { military_school > 0 }
 		}		
 	}
 }
