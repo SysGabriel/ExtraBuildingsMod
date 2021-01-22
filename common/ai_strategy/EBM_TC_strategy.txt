@@ -14,7 +14,7 @@ EBM_TC_build = {
 
 EBM_MS_build = {
 	enable = {
-		tech_centre < 1
+		military_school < 1
 	}
 
 	ai_strategy = {
