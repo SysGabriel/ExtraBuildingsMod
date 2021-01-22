@@ -1,0 +1,329 @@
+add_namespace = EBM_MS
+# ==========================================================================
+# Start Events
+# ==========================================================================
+country_event = {
+	id = EBM_MS.1
+	title = EBM_MS.1.t
+	desc = EBM_MS.1.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		military_school > 0
+		NOT = {
+			has_idea = EBM_military_school_default
+			has_idea = EBM_military_school_experience
+			has_idea = EBM_military_school_experience_air
+			has_idea = EBM_military_school_experience_army
+			has_idea = EBM_military_school_experience_navy
+			has_idea = EBM_military_school_mobilization
+			has_idea = EBM_military_school_mobilization_conscription
+			has_idea = EBM_military_school_mobilization_factory
+			has_idea = EBM_military_school_training
+			has_idea = EBM_military_school_training_efficiency
+			has_idea = EBM_military_school_training_time
+		}
+	}
+
+	option = {
+		name = EBM_MS.1.a
+		add_ideas = EBM_military_school_default
+	}
+}
+# ==========================================================================
+# Choose Focus
+# ==========================================================================
+country_event = {
+	id = EBM_MS.10
+	title = EBM_MS.10.t
+	desc = EBM_MS.10.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		military_school > 0
+		has_idea = EBM_military_school_default
+	}
+
+	option = {
+		name = EBM_MS.10.a
+		swap_ideas = {
+			remove_idea = EBM_military_school_default
+			add_idea = EBM_military_school_experience
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = 10
+			}
+			modifier = {
+				communism > 50
+				add = -10
+			}
+			modifier = {
+				fascism > 50
+				add = -20
+			}
+			modifier = {
+				neutrality > 50
+				factor = 5
+			}
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_MS.10.b
+		swap_ideas = {
+			remove_idea = EBM_military_school_default
+			add_idea = EBM_military_school_mobilization
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = -10
+			}
+			modifier = {
+				communism > 50
+				add = 10
+			}
+			modifier = {
+				fascism > 50
+				add = -10
+			}
+			modifier = {
+				neutrality > 50
+				factor = 0
+			}
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_MS.10.c
+		swap_ideas = {
+			remove_idea = EBM_military_school_default
+			add_idea = EBM_military_school_training
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = -20
+			}
+			modifier = {
+				communism > 50
+				add = -20
+			}
+			modifier = {
+				fascism > 50
+				add = 20
+			}
+			modifier = {
+				neutrality > 50
+				factor = 0
+			}
+			factor = 1
+		}
+	}
+}
+# ==========================================================================
+# Focus on Experience
+# ==========================================================================
+country_event = {
+	id = EBM_MS.100
+	title = EBM_MS.100.t
+	desc = EBM_MS.100.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		military_school > 0
+		has_idea = EBM_military_school_experience
+	}
+
+	option = {
+		name = EBM_MS.100.a
+		swap_ideas = {
+			remove_idea = EBM_military_school_experience
+			add_idea = EBM_military_school_experience_army
+		}
+		ai_chance = {
+			base = 33
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_MS.100.b
+		swap_ideas = {
+			remove_idea = EBM_military_school_experience
+			add_idea = EBM_military_school_experience_navy
+		}
+		ai_chance = {
+			base = 33
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_MS.100.c
+		swap_ideas = {
+			remove_idea = EBM_military_school_experience
+			add_idea = EBM_military_school_experience_air
+		}
+		ai_chance = {
+			base = 33
+			factor = 1
+		}
+	}
+}
+
+# ==========================================================================
+# Focus on Mobilization
+# ==========================================================================
+country_event = {
+	id = EBM_MS.101
+	title = EBM_MS.101.t
+	desc = EBM_MS.101.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		military_school > 0
+		has_idea = EBM_military_school_mobilization
+	}
+
+	option = {
+		name = EBM_MS.101.a
+		swap_ideas = {
+			remove_idea = EBM_military_school_mobilization
+			add_idea = EBM_military_school_mobilization_conscription
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = -50
+			}
+			modifier = {
+				communism > 50
+				add = 20
+			}
+			modifier = {
+				fascism > 50
+				add = 20
+			}
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_MS.101.b
+		swap_ideas = {
+			remove_idea = EBM_military_school_experience
+			add_idea = EBM_military_school_mobilization_factory
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				communism > 50
+				add = -30
+			}
+			modifier = {
+				fascism > 50
+				add = -30
+			}
+			modifier = {
+				neutrality > 50
+				factor = 5
+			}
+			factor = 1
+		}
+	}
+}
+
+# ==========================================================================
+# Focus on Training
+# ==========================================================================
+country_event = {
+	id = EBM_MS.102
+	title = EBM_MS.102.t
+	desc = EBM_MS.102.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		military_school > 0
+		has_idea = EBM_military_school_training
+	}
+
+	option = {
+		name = EBM_MS.102.a
+		swap_ideas = {
+			remove_idea = EBM_military_school_training
+			add_idea = EBM_military_school_training_efficiency
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = 20
+			}
+			modifier = {
+				communism > 50
+				add = -20
+			}
+			modifier = {
+				fascism > 50
+				add = -20
+			}
+			modifier = {
+				neutrality > 50
+				factor = 5
+			}
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_MS.102.b
+		swap_ideas = {
+			remove_idea = EBM_military_school_training
+			add_idea = EBM_military_school_training_time
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = -10
+			}
+			modifier = {
+				communism > 50
+				add = -10
+			}
+			modifier = {
+				fascism > 50
+				add = 20
+			}
+			modifier = {
+				neutrality > 50
+				factor = 0
+			}
+			factor = 1
+		}
+	}
+}

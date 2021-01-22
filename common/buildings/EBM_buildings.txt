@@ -1,21 +1,90 @@
 buildings = {
 
-	#Research Centre
+	#Tech Centre
 	#This structure should be focused on research
 	tech_centre = {
 		
-		base_cost = 30000
-		per_level_extra_cost = 30000
-		max_level = 2
-		damage_factor = 2
-		value = 1
+		base_cost = 100000
+		#per_level_extra_cost = 50000
+		max_level = 5
+		damage_factor = 5
+		value = 10
 		icon_frame = 8
 		show_on_map = 1
+		shares_slots = no
+		infrastructure_construction_effect = yes
+		
+		research_speed_factor = 0.10
+	}
+
+	#Military School
+	#This one is focused on gaining experience for the armies
+	military_school = {
+		
+		base_cost = 7000
+		#per_level_extra_cost = 7000
+		max_level = 5
+		damage_factor = 3
+		value = 1
+		icon_frame = 8
+		show_on_map = 0
+		shares_slots = no
+		infrastructure_construction_effect = yes
+		
+		recruitable_population = 0.0001	
+	}
+	
+	#Bank
+	#This one should be focused into improving local construction speed
+	bank = {
+	
+		base_cost = 3000
+		#per_level_extra_cost = 1000
+		max_level = 10
+		damage_factor = 5
+		value = 2
+		icon_frame = 8
+		show_on_map = 0
+		shares_slots = no
+		infrastructure_construction_effect = yes
+		
+		industrial_capacity_factory = 0.002
+		industrial_capacity_dockyard = 0.002
+		monthly_population = 0.001
+		
+	}
+	
+	#University
+	#This one is a game changer, it provides a great amount of research speed
+	university = {
+		
+		base_cost = 150000
+		max_level = 2
+		damage_factor = 10
+		value = 50
+		icon_frame = 8
+		show_on_map = 0
 		shares_slots = yes
 		infrastructure_construction_effect = yes
 		
-		research_speed_factor = 0.05
+		research_speed_factor = 0.25
+		
 	}
-
 	
+	#Engineering State Corporation
+	#This will help the construction speed for all country
+	engineering_corporation = {
+	
+		base_cost = 5000
+		#per_level_extra_cost = 5000
+		max_level = 5
+		damage_factor = 10
+		value = 10
+		icon_frame = 8
+		show_on_map = 0
+		shares_slots = no
+		infrastructure_construction_effect = yes
+		
+		state_production_speed_buildings_factor = 1		
+	}
 }

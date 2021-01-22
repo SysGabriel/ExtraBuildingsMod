@@ -11,3 +11,17 @@ EBM_TC_build = {
 
 	
 }
+
+EBM_MS_build = {
+	enable = {
+		military_school < 1
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = military_school
+		value = 1
+	}
+
+	
+}
