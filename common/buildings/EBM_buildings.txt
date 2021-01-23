@@ -14,7 +14,7 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		research_speed_factor = 0.10
+		research_speed_factor = 0.05
 	}
 
 	#Military School
@@ -48,9 +48,8 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		industrial_capacity_factory = 0.002
-		industrial_capacity_dockyard = 0.002
 		monthly_population = 0.001
+		annex_cost_factor = -0.001
 		
 	}
 	
@@ -85,6 +84,6 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		state_production_speed_buildings_factor = 1		
+		state_production_speed_buildings_factor = 0.20		
 	}
 }
