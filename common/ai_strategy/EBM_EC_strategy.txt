@@ -1,0 +1,11 @@
+EBM_EC_build = {
+	enable = {
+		engineering_corporation < 1
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = engineering_corporation
+		value = 1
+	}
+}

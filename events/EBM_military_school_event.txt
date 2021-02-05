@@ -42,7 +42,7 @@ country_event = {
 	desc = EBM_MS.10.d
 
 	mean_time_to_happen = {
-		days = 30
+		days = 90
 	}
 
 	trigger = {
@@ -143,7 +143,7 @@ country_event = {
 	desc = EBM_MS.100.d
 
 	mean_time_to_happen = {
-		days = 30
+		days = 180
 	}
 
 	trigger = {
@@ -197,7 +197,7 @@ country_event = {
 	desc = EBM_MS.101.d
 
 	mean_time_to_happen = {
-		days = 30
+		days = 365
 	}
 
 	trigger = {
@@ -232,7 +232,7 @@ country_event = {
 	option = {
 		name = EBM_MS.101.b
 		swap_ideas = {
-			remove_idea = EBM_military_school_experience
+			remove_idea = EBM_military_school_mobilization
 			add_idea = EBM_military_school_mobilization_factory
 		}
 		ai_chance = {
@@ -263,7 +263,7 @@ country_event = {
 	desc = EBM_MS.102.d
 
 	mean_time_to_happen = {
-		days = 30
+		days = 120
 	}
 
 	trigger = {

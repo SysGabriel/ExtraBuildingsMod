@@ -1,0 +1,272 @@
+add_namespace = EBM_EC
+
+# =========================================
+# Engineering Corporation
+# Start and Continuous Event
+# =========================================
+
+country_event = {
+	id = EBM_EC.1
+	title = EBM_EC.1.t
+	desc = EBM_EC.1.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		engineering_corporation > 0
+		NOT = {
+			has_idea = EBM_engineering_corporation_construction
+			has_idea = EBM_engineering_corporation_construction_efficient
+			has_idea = EBM_engineering_corporation_construction_expand
+			has_idea = EBM_engineering_corporation_construction_speed
+			has_idea = EBM_engineering_corporation_default
+			has_idea = EBM_engineering_corporation_equipment
+			has_idea = EBM_engineering_corporation_equipment_efficiency
+			has_idea = EBM_engineering_corporation_equipment_expanded
+			has_idea = EBM_engineering_corporation_military
+			has_idea = EBM_engineering_corporation_military_air
+			has_idea = EBM_engineering_corporation_military_arms
+			has_idea = EBM_engineering_corporation_military_general
+			has_idea = EBM_engineering_corporation_military_naval
+			has_idea = EBM_engineering_corporation_mining
+			has_idea = EBM_engineering_corporation_mining_balanced
+			has_idea = EBM_engineering_corporation_mining_expanded
+		}
+	}
+
+	option = {
+		name = EBM_EC.1.a
+		add_ideas = EBM_engineering_corporation_default
+	}
+}
+
+country_event = {
+	id = EBM_EC.9999
+	title = EBM_EC.9999.t
+	desc = EBM_EC.9999.d
+
+	mean_time_to_happen = {
+		days = 150
+	}
+
+	trigger = {
+		has_stability > 0.95
+		engineering_corporation > 0
+		NOT = {
+			has_idea = EBM_engineering_corporation_boom
+		}
+	}
+
+	option = {
+		name = EBM_EC.9999.a
+		add_ideas = EBM_engineering_corporation_boom
+	}
+
+}
+
+# =========================================
+# Engineering Corporation
+# Choose Focus Event
+# =========================================
+
+country_event = {
+	id = EBM_EC.10
+	title = EBM_EC.10.t
+	desc = EBM_EC.10.d
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	trigger = {
+		has_idea = EBM_engineering_corporation_default
+	}
+
+	option = {
+		name = EBM_EC.10.a
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_default
+			add_idea = EBM_engineering_corporation_mining
+		}
+	}
+	option = {
+		name = EBM_EC.10.b
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_default
+			add_idea = EBM_engineering_corporation_construction
+		}
+	}
+	option = {
+		name = EBM_EC.10.c
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_default
+			add_idea = EBM_engineering_corporation_military
+		}
+	}
+	option = {
+		name = EBM_EC.10.dd
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_default
+			add_idea = EBM_engineering_corporation_equipment
+		}
+	}
+}
+
+# =========================================
+# Engineering Corporation
+# Mining Focus Event
+# =========================================
+
+country_event = {
+	id = EBM_EC.101
+	title = EBM_EC.101.t
+	desc = EBM_EC.101.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	trigger = {
+		has_idea = EBM_engineering_corporation_mining
+	}
+
+	option = {
+		name = EBM_EC.101.a
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_mining
+			add_idea = EBM_engineering_corporation_mining_balanced
+		}
+	}
+	option = {
+		name = EBM_EC.101.b
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_mining
+			add_idea = EBM_engineering_corporation_mining_expanded
+		}
+	}
+}
+
+# =========================================
+# Engineering Corporation
+# Construction Focus Event
+# =========================================
+
+country_event = {
+	id = EBM_EC.102
+	title = EBM_EC.102.t
+	desc = EBM_EC.102.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	trigger = {
+		has_idea = EBM_engineering_corporation_construction
+	}
+
+	option = {
+		name = EBM_EC.102.a
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_construction
+			add_idea = EBM_engineering_corporation_construction_efficient
+		}
+	}
+	option = {
+		name = EBM_EC.102.b
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_construction
+			add_idea = EBM_engineering_corporation_construction_expand
+		}
+	}
+	option = {
+		name = EBM_EC.102.c
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_construction
+			add_idea = EBM_engineering_corporation_construction_speed
+		}
+	}
+}
+
+# =========================================
+# Engineering Corporation
+# Military Focus Event
+# =========================================
+
+country_event = {
+	id = EBM_EC.103
+	title = EBM_EC.103.t
+	desc = EBM_EC.103.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	trigger = {
+		has_idea = EBM_engineering_corporation_military
+	}
+
+	option = {
+		name = EBM_EC.103.a
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_military
+			add_idea = EBM_engineering_corporation_military_general
+		}
+	}
+	option = {
+		name = EBM_EC.103.b
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_military
+			add_idea = EBM_engineering_corporation_military_arms
+		}
+	}
+	option = {
+		name = EBM_EC.103.c
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_military
+			add_idea = EBM_engineering_corporation_military_naval
+		}
+	}
+	option = {
+		name = EBM_EC.103.dd
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_military
+			add_idea = EBM_engineering_corporation_military_air
+		}
+	}
+}
+
+# =========================================
+# Engineering Corporation
+# Equipment Focus Event
+# =========================================
+
+country_event = {
+	id = EBM_EC.104
+	title = EBM_EC.104.t
+	desc = EBM_EC.104.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	trigger = {
+		has_idea = EBM_engineering_corporation_equipment
+	}
+
+	option = {
+		name = EBM_EC.104.a
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_equipment
+			add_idea = EBM_engineering_corporation_equipment_efficiency
+		}
+	}
+	option = {
+		name = EBM_EC.104.b
+		swap_ideas = {
+			remove_idea = EBM_engineering_corporation_equipment
+			add_idea = EBM_engineering_corporation_equipment_expanded
+		}
+	}
+}

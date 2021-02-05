@@ -4,7 +4,7 @@ buildings = {
 	#This structure should be focused on research
 	tech_centre = {
 		
-		base_cost = 100000
+		base_cost = 10000
 		#per_level_extra_cost = 50000
 		max_level = 5
 		damage_factor = 5
@@ -14,14 +14,14 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		research_speed_factor = 0.05
+		research_speed_factor = 0.002
 	}
 
 	#Military School
 	#This one is focused on gaining experience for the armies
 	military_school = {
 		
-		base_cost = 7000
+		base_cost = 5000
 		#per_level_extra_cost = 7000
 		max_level = 5
 		damage_factor = 3
@@ -31,7 +31,7 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		recruitable_population = 0.0001	
+		recruitable_population = 0.005	
 	}
 	
 	#Bank
@@ -49,7 +49,6 @@ buildings = {
 		infrastructure_construction_effect = yes
 		
 		monthly_population = 0.001
-		annex_cost_factor = -0.001
 		
 	}
 	
@@ -57,7 +56,8 @@ buildings = {
 	#This one is a game changer, it provides a great amount of research speed
 	university = {
 		
-		base_cost = 150000
+		base_cost = 100000
+		per_level_extra_cost = 100000
 		max_level = 2
 		damage_factor = 10
 		value = 50
@@ -84,6 +84,6 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		state_production_speed_buildings_factor = 0.20		
+		industry_free_repair_factor = 0.5
 	}
 }
