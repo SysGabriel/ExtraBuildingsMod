@@ -31,7 +31,7 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		recruitable_population = 0.005	
+		recruitable_population = 0.001	
 	}
 	
 	#Bank

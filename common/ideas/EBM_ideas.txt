@@ -95,14 +95,14 @@ ideas = {
 			picture = tur_coordinated_balkan_armed_forces
 			modifier = {
 				army_org = 20
-				army_org_Factor = 1
+				army_org_Factor = 0.2
 				research_speed_factor = 0.15
 				army_leader_start_attack_level = 1
 				army_leader_start_defense_level = 1
 				army_leader_start_logistics_level = 1
 				army_leader_start_planning_level = 2
-				max_planning_factor = 5
-				planning_speed = 1
+				max_planning_factor = 1
+				planning_speed = 0.2
 				experience_gain_army = 0.001
 			}
 
