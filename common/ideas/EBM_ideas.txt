@@ -169,7 +169,6 @@ ideas = {
 			modifier = {
 				operation_cost = -0.25
 				operation_risk = -0.25
-				operation_rescue_operative_risk	= -0.25
 			}
 
 			allowed = {	tech_centre > 0 }
@@ -216,7 +215,7 @@ ideas = {
 			picture = generic_war_preparation
 			modifier = {
 				training_time_army_factor = -0.1
-				conscription = 0.05
+				conscription = 0.01
 			}
 			
 			on_add = {
@@ -258,7 +257,7 @@ ideas = {
 		EBM_military_school_mobilization = {
 			picture = generic_war_preparation
 			modifier = {
-				conscription = 0.1
+				conscription = 0.5
 				production_factory_max_efficiency_factor = 0.25
 			}
 			
@@ -324,6 +323,7 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.25
 				army_defence_factor = 0.25
+				max_planning = 0.25
 			}
 			
 			allowed = {	military_school > 0 }

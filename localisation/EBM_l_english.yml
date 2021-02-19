@@ -11,6 +11,8 @@
   university_desc:0 "An University. It improves our research effords."
   engineering_corporation:0 "Engineering Corporation"
   engineering_corporation_desc:0 "Our private resource supplier for our country engineering and factories development."
+  specialized_factory_tank:0 "Tank Factory"
+  specialized_factory_tank_desc:0 "A Specialized Factory for improve our armored divisions."
   EBM_tech_centre_default:0 "Tech Centre"
   EBM_tech_centre_civil:0 "Tech Centre - Civilian Focus"
   EBM_tech_centre_civil_production:0 "Tech Centre - Production Focus"
