@@ -355,7 +355,7 @@ ideas = {
 		EBM_military_school_mobilization_conscription = {
 			picture = generic_war_preparation
 			modifier = {
-				conscription = 0.2
+				conscription = 0.1
 				weekly_manpower = 5000
 			}
 			
@@ -386,13 +386,10 @@ ideas = {
 			}
 
 			on_add = {
-
-				# This improves the tech centre to be more attractive to build and to put a challenge, even minors can put up a great challenge
 				add_offsite_building = {
 					type = industrial_complex
 					level = 5
 				}
-
 			}
 
 			allowed = {	always = yes }
