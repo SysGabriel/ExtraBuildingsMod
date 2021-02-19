@@ -344,7 +344,7 @@ ideas = {
 			on_add = {
 				add_offsite_building = {
 					type = arms_factory
-					level = 5
+					level = 10
 				}
 			}
 
