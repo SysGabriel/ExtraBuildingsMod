@@ -257,7 +257,7 @@ ideas = {
 		EBM_military_school_mobilization = {
 			picture = generic_war_preparation
 			modifier = {
-				conscription = 0.5
+				conscription = 0.05
 				production_factory_max_efficiency_factor = 0.25
 			}
 			
