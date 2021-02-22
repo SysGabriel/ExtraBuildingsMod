@@ -211,6 +211,7 @@ country_event = {
 			remove_idea = EBM_military_school_mobilization
 			add_idea = EBM_military_school_mobilization_conscription
 		}
+		
 		ai_chance = {
 			base = 10
 			modifier = {

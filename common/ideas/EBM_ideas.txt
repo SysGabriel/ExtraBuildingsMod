@@ -364,6 +364,7 @@ ideas = {
 					type = arms_factory
 					level = 5
 				}
+				
 			}
 
 			allowed = {	military_school > 0 }
