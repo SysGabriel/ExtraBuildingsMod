@@ -1,12 +1,11 @@
-EBM_TC_build = {
+EBM_EC_build = {
 	enable = {
-		tech_centre < 1
+		engineering_corporation < 1
 	}
 
 	ai_strategy = {
 		type = building_target
-		id = tech_centre
+		id = engineering_corporation
 		value = 1
 	}
-
 }

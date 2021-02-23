@@ -4,7 +4,7 @@ buildings = {
 	#This structure should be focused on research
 	tech_centre = {
 		
-		base_cost = 100000
+		base_cost = 10000
 		#per_level_extra_cost = 50000
 		max_level = 5
 		damage_factor = 5
@@ -14,14 +14,16 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		research_speed_factor = 0.10
+		enemy_operative_detection_chance_factor = 0.02
+		operation_risk = -0.01
+		compliance_gain = 0.005
 	}
 
 	#Military School
 	#This one is focused on gaining experience for the armies
 	military_school = {
 		
-		base_cost = 7000
+		base_cost = 3000
 		#per_level_extra_cost = 7000
 		max_level = 5
 		damage_factor = 3
@@ -31,7 +33,12 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		recruitable_population = 0.0001	
+		weekly_manpower = 5	
+		army_org_regain = 0.002
+		army_morale_factor = 0.002
+		war_support_weekly = 0.0001
+		max_command_power = 1
+		
 	}
 	
 	#Bank
@@ -48,28 +55,24 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		industrial_capacity_factory = 0.002
-		industrial_capacity_dockyard = 0.002
-		monthly_population = 0.001
-		
+		production_lack_of_resource_penalty_factor = -0.001
 	}
 	
 	#University
-	#This one is a game changer, it provides a great amount of research speed
-	university = {
-		
-		base_cost = 150000
-		max_level = 2
-		damage_factor = 10
-		value = 50
-		icon_frame = 8
-		show_on_map = 0
-		shares_slots = yes
-		infrastructure_construction_effect = yes
-		
-		research_speed_factor = 0.25
-		
-	}
+	#university = {
+	#	
+	#	base_cost = 25000
+	#	max_level = 1
+	#	damage_factor = 10
+	#	value = 50
+	#	icon_frame = 8
+	#	show_on_map = 0
+	#	shares_slots = yes
+	#	infrastructure_construction_effect = yes
+	#	
+	#	research_speed_factor = 0.05
+	#	state_production_speed_buildings_factor = 1
+	#}
 	
 	#Engineering State Corporation
 	#This will help the construction speed for all country
@@ -85,6 +88,23 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		state_production_speed_buildings_factor = 1		
+		industry_free_repair_factor = 0.5
 	}
+
+	#Tank Specialized Factory
+	#specialized_factory_tank = {
+	#
+	#	base_cost = 25000
+	#	max_level = 1
+	#	damage_factor = 12
+	#	value = 10
+	#	icon_frame = 7
+	#	show_on_map = 0
+	#	shares_slots = yes
+	#	infrastructure_construction_effect = yes
+	#
+	#	army_armor_attack_factor = 0.01
+	#	army_armor_defence_factor = 0.01
+	#	army_armor_speed_factor = 0.01		
+	#}
 }

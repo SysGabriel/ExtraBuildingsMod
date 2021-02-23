@@ -1,0 +1,235 @@
+add_namespace = EBM_BK
+# ==========================================================================
+# Start Events
+# ==========================================================================
+country_event = {
+	id = EBM_BK.1
+	title = EBM_BK.1.t
+	desc = EBM_BK.1.d
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		bank > 0
+		NOT = {
+			has_idea = EBM_bank_default
+			has_idea = EBM_bank_social
+			has_idea = EBM_bank_social_improved
+			has_idea = EBM_bank_balance
+			has_idea = EBM_bank_balance_improved
+			has_idea = EBM_bank_private
+			has_idea = EBM_bank_private_industrial
+			has_idea = EBM_bank_private_resources
+			has_idea = EBM_bank_private_speed
+		}
+	}
+
+	option = {
+		name = EBM_BK.1.a
+		add_ideas = EBM_bank_default
+	}
+}
+# ==========================================================================
+# Choose Focus
+# ==========================================================================
+country_event = {
+	id = EBM_BK.10
+	title = EBM_BK.10.t
+	desc = EBM_BK.10.d
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	trigger = {
+		bank > 0
+		has_idea = EBM_bank_default
+	}
+
+	option = {
+		name = EBM_BK.10.a
+		swap_ideas = {
+			remove_idea = EBM_bank_default
+			add_idea = EBM_bank_social
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = -10
+			}
+			modifier = {
+				communism > 50
+				add = 10
+			}
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_BK.10.b
+		swap_ideas = {
+			remove_idea = EBM_bank_default
+			add_idea = EBM_bank_private
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = 10
+			}
+			modifier = {
+				communism > 50
+				add = -10
+			}
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_BK.10.c
+		swap_ideas = {
+			remove_idea = EBM_bank_default
+			add_idea = EBM_bank_balance
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				neutrality > 50
+				add = 20
+			}
+			factor = 1
+		}
+	}
+}
+# ==========================================================================
+# Focus on Social
+# ==========================================================================
+country_event = {
+	id = EBM_BK.100
+	title = EBM_BK.100.t
+	desc = EBM_BK.100.d
+
+	mean_time_to_happen = {
+		days = 270
+	}
+
+	trigger = {
+		bank > 0
+		has_idea = EBM_bank_social
+	}
+
+	option = {
+		name = EBM_BK.100.a
+		swap_ideas = {
+			remove_idea = EBM_bank_social
+			add_idea = EBM_bank_social_improved
+		}
+		ai_chance = {
+			base = 1
+			factor = 1
+		}
+	}
+}
+
+# ==========================================================================
+# Focus on Private
+# ==========================================================================
+country_event = {
+	id = EBM_BK.101
+	title = EBM_BK.101.t
+	desc = EBM_BK.101.d
+
+	mean_time_to_happen = {
+		days = 270
+	}
+
+	trigger = {
+		bank > 0
+		has_idea = EBM_bank_private
+	}
+
+	option = {
+		name = EBM_BK.101.a
+		swap_ideas = {
+			remove_idea = EBM_bank_private
+			add_idea = EBM_bank_private_industrial
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = 20
+			}
+			modifier = {
+				communism > 50
+				add = -20
+			}
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EBM_BK.101.b
+		swap_ideas = {
+			remove_idea = EBM_bank_private
+			add_idea = EBM_bank_private_resources
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				democratic > 50
+				add = -20
+			}
+			modifier = {
+				communism > 50
+				add = 20
+			}
+			factor = 1
+		}
+	}
+
+	option = {
+		name = EBM_BK.101.c
+		swap_ideas = {
+			remove_idea = EBM_bank_private
+			add_idea = EBM_bank_private_speed
+		}
+		ai_chance = {
+			base = 1
+			factor = 1
+		}
+	}
+}
+
+# ==========================================================================
+# Focus on Balance
+# ==========================================================================
+country_event = {
+	id = EBM_BK.102
+	title = EBM_BK.102.t
+	desc = EBM_BK.102.d
+
+	mean_time_to_happen = {
+		days = 270
+	}
+
+	trigger = {
+		bank > 0
+		has_idea = EBM_bank_balance
+	}
+
+	option = {
+		name = EBM_BK.102.a
+		swap_ideas = {
+			remove_idea = EBM_bank_balance
+			add_idea = EBM_bank_balance_improved
+		}
+		ai_chance = {
+			base = 1
+			factor = 1
+		}
+	}
+}
