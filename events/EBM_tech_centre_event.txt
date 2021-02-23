@@ -66,9 +66,9 @@ country_event = {
 			add_idea = EBM_tech_centre_civil
 			remove_idea = EBM_tech_centre_default
 		}
-		every_other_country = {
-			news_event = EBM_TC.1000
-		}	
+		#every_other_country = {
+		#	news_event = EBM_TC.1000
+		#}	
 	}
 
 	option = {
@@ -85,9 +85,9 @@ country_event = {
 			add_idea = EBM_tech_centre_military
 			remove_idea = EBM_tech_centre_default
 		}
-		every_other_country = {
-			news_event = EBM_TC.1000
-		}	
+		#every_other_country = {
+		#	news_event = EBM_TC.1000
+		#}	
 	}
 
 	option = {
@@ -103,9 +103,9 @@ country_event = {
 			add_idea = EBM_tech_centre_espionage
 			remove_idea = EBM_tech_centre_default
 		}
-		every_other_country = {
-			news_event = EBM_TC.1000
-		}	
+		#every_other_country = {
+		#	news_event = EBM_TC.1000
+		#}	
 	}
 }
 
@@ -169,9 +169,9 @@ country_event = {
 			add_idea = EBM_tech_centre_civil_production
 			remove_idea = EBM_tech_centre_civil
 		}
-		every_other_country = {
-			news_event = EBM_TC.1010
-		}		
+		#every_other_country = {
+		#	news_event = EBM_TC.1010
+		#}		
 	}
 
 	option = {
@@ -192,9 +192,9 @@ country_event = {
 			add_idea = EBM_tech_centre_civil_resource
 			remove_idea = EBM_tech_centre_civil
 		}
-		every_other_country = {
-			news_event = EBM_TC.1010
-		}
+		#every_other_country = {
+		#	news_event = EBM_TC.1010
+		#}
 	}
 }
 
@@ -257,9 +257,9 @@ country_event = {
 			add_idea = EBM_tech_centre_military_organization
 			remove_idea = EBM_tech_centre_military
 		}
-		every_other_country = {
-			news_event = EBM_TC.1020
-		}		
+		#every_other_country = {
+		#	news_event = EBM_TC.1020
+		#}		
 	}
 
 	option = {
@@ -280,9 +280,9 @@ country_event = {
 			add_idea = EBM_tech_centre_military_attack
 			remove_idea = EBM_tech_centre_military
 		}
-		every_other_country = {
-			news_event = EBM_TC.1020
-		}
+		#every_other_country = {
+		#	news_event = EBM_TC.1020
+		#}
 	}
 
 	option = {
@@ -303,9 +303,9 @@ country_event = {
 			add_idea = EBM_tech_centre_military_defense
 			remove_idea = EBM_tech_centre_military
 		}
-		every_other_country = {
-			news_event = EBM_TC.1020
-		}
+		#every_other_country = {
+		#	news_event = EBM_TC.1020
+		#}
 	}
 }
 
@@ -378,9 +378,9 @@ country_event = {
 			add_idea = EBM_tech_centre_espionage_intel
 			remove_idea = EBM_tech_centre_espionage
 		}
-		every_other_country = {
-			news_event = EBM_TC.1030
-		}
+		#every_other_country = {
+		#	news_event = EBM_TC.1030
+		#}
 	}
 }
 
