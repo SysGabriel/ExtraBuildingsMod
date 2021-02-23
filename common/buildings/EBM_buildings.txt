@@ -14,8 +14,8 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		offence = 0.001
-		defence = 0.001
+		army_defence_factor = 0.001
+		army_attack_factor = 0.001
 		breakthrough_factor = 0.001
 		army_speed_factor = 0.001
 		compliance_gain = 0.0005
