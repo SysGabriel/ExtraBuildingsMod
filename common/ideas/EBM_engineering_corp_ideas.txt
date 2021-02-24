@@ -1,0 +1,361 @@
+ideas = {
+	country = {
+		# ===============================================
+		# Engineering Corp. Ideas
+		# ===============================================
+		# Start Idea / Generic Ideas
+		# ===============================================
+		EBM_engineering_corporation_boom = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.5
+				local_resources_factor = 0.5
+				industrial_capacity_factory = 0.05
+				political_power_gain = 1
+				autonomy_gain = 10
+			}
+
+			on_add = {
+				add_autonomy_score = {
+					value = 150
+				}
+				add_political_power = 100
+				add_offsite_building = {
+					type = arms_factory
+					level = 5
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+
+			on_remove = {
+				add_autonomy_score = {
+					value = -300
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = -5
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = -5
+				}
+			}
+			
+			available = { 
+				has_stability > 0.95 
+			}
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+
+		EBM_engineering_corporation_default = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+
+		# ===============================================
+		# Choose Focus
+		# ===============================================
+		EBM_engineering_corporation_mining = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.3
+				country_resource_steel = 50
+				country_resource_aluminium = 30
+				country_resource_rubber = 10
+				country_resource_tungsten = 10
+				country_resource_oil = 10
+				country_resource_chromium = 5
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+
+		EBM_engineering_corporation_construction = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.3
+				local_resources_factor = 0.05
+				global_building_slots_factor = 0.1
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 10
+				}
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+
+		EBM_engineering_corporation_military = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 10
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 10
+				}
+			}
+		}
+
+		EBM_engineering_corporation_equipment = {
+			picture = generic_infantry_equipment_manufacturer_3
+			modifier = {
+				production_factory_max_efficiency_factor = 0.3
+				local_resources_factor = 0.05
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 10
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = -5
+				}
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		# ===============================================
+		# Mining Focus
+		# ===============================================
+		EBM_engineering_corporation_mining_expanded = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.6
+				country_resource_steel = 100
+				country_resource_aluminium = 60
+				country_resource_rubber = 20
+				country_resource_tungsten = 20
+				country_resource_oil = 20
+				country_resource_chromium = 10
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+
+		EBM_engineering_corporation_mining_balanced = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.3
+				country_resource_steel = 50
+				country_resource_aluminium = 30
+				country_resource_rubber = 10
+				country_resource_tungsten = 10
+				country_resource_oil = 10
+				country_resource_chromium = 5
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 15
+				}
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		# ===============================================
+		# Construction Focus
+		# ===============================================
+		EBM_engineering_corporation_construction_speed = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 1.2
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.15
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 5
+				}
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+
+		EBM_engineering_corporation_construction_efficient = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.6
+				local_resources_factor = 0.6
+				global_building_slots_factor = 0.15
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		
+		EBM_engineering_corporation_construction_expand = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_buildings_factor = 0.3
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.3
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 20
+				}
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+		# ===============================================
+		# Military Focus
+		# ===============================================
+		EBM_engineering_corporation_military_general = {
+			picture = generic_build_infrastructure
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+				industrial_capacity_factory = 0.25
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 10
+				}
+				add_offsite_building = {
+					type = dockyard
+					level = 10
+				}
+			}
+		}
+
+		EBM_engineering_corporation_military_arms = {
+			picture = generic_build_infrastructure
+			modifier = {
+				industrial_capacity_factory = 0.5
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 20
+				}
+			}
+		}
+
+		EBM_engineering_corporation_military_naval = {
+			picture = generic_build_infrastructure
+			modifier = {
+				industrial_capacity_dockyard = 0.5
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = dockyard
+					level = 20
+				}
+			}
+		}
+
+		EBM_engineering_corporation_military_air = {
+			picture = generic_build_infrastructure
+			modifier = {
+				air_close_air_support_agility_factor = 0.15
+				air_close_air_support_attack_factor = 0.15
+				air_close_air_support_defence_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 15
+				}
+			}
+		}
+		# ===============================================
+		# Equipments Focus
+		# ===============================================
+		EBM_engineering_corporation_equipment_efficiency = {
+			picture = generic_infantry_equipment_manufacturer_3
+			modifier = {
+				production_factory_max_efficiency_factor = 0.6
+				production_lack_of_resource_penalty_factor = -0.15
+				production_factory_start_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+				consumer_goods_factor = 0.05
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+
+		EBM_engineering_corporation_equipment_expanded = {
+			picture = generic_infantry_equipment_manufacturer_3
+			modifier = {
+				production_factory_max_efficiency_factor = 0.3
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_start_efficiency_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+
+			on_add = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 20
+				}
+			}
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+		}
+	}
+}

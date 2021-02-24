@@ -5,17 +5,19 @@ buildings = {
 	tech_centre = {
 		
 		base_cost = 10000
-		#per_level_extra_cost = 50000
-		max_level = 5
+		per_level_extra_cost = 1000
+		max_level = 10
 		damage_factor = 5
 		value = 10
 		icon_frame = 8
-		show_on_map = 1
+		show_on_map = 0
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		enemy_operative_detection_chance_factor = 0.02
-		operation_risk = -0.01
+		army_defence_factor = 0.005
+		army_attack_factor = 0.005
+		breakthrough_factor = 0.005
+		army_speed_factor = 0.005
 		compliance_gain = 0.005
 	}
 
@@ -24,8 +26,8 @@ buildings = {
 	military_school = {
 		
 		base_cost = 3000
-		#per_level_extra_cost = 7000
-		max_level = 5
+		per_level_extra_cost = 250
+		max_level = 10
 		damage_factor = 3
 		value = 1
 		icon_frame = 8
@@ -46,7 +48,7 @@ buildings = {
 	bank = {
 	
 		base_cost = 3000
-		#per_level_extra_cost = 1000
+		per_level_extra_cost = 100
 		max_level = 10
 		damage_factor = 5
 		value = 2
@@ -56,6 +58,8 @@ buildings = {
 		infrastructure_construction_effect = yes
 		
 		production_lack_of_resource_penalty_factor = -0.001
+		local_resources = 0.001
+		production_speed_buildings_factor = 0.01
 	}
 	
 	#University
@@ -79,8 +83,8 @@ buildings = {
 	engineering_corporation = {
 	
 		base_cost = 5000
-		#per_level_extra_cost = 5000
-		max_level = 5
+		per_level_extra_cost = 1000
+		max_level = 20
 		damage_factor = 10
 		value = 10
 		icon_frame = 8
@@ -88,23 +92,8 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
+		state_production_speed_buildings_factor = 0.1
+		industry_repair_factor = 0.05
 		industry_free_repair_factor = 0.5
 	}
-
-	#Tank Specialized Factory
-	#specialized_factory_tank = {
-	#
-	#	base_cost = 25000
-	#	max_level = 1
-	#	damage_factor = 12
-	#	value = 10
-	#	icon_frame = 7
-	#	show_on_map = 0
-	#	shares_slots = yes
-	#	infrastructure_construction_effect = yes
-	#
-	#	army_armor_attack_factor = 0.01
-	#	army_armor_defence_factor = 0.01
-	#	army_armor_speed_factor = 0.01		
-	#}
 }
