@@ -14,11 +14,11 @@ buildings = {
 		shares_slots = no
 		infrastructure_construction_effect = yes
 		
-		army_defence_factor = 0.001
-		army_attack_factor = 0.001
-		breakthrough_factor = 0.001
-		army_speed_factor = 0.001
-		compliance_gain = 0.0005
+		army_defence_factor = 0.005
+		army_attack_factor = 0.005
+		breakthrough_factor = 0.005
+		army_speed_factor = 0.005
+		compliance_gain = 0.005
 	}
 
 	#Military School

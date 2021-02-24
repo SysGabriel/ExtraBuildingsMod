@@ -198,7 +198,7 @@ ideas = {
 		EBM_engineering_corporation_construction_speed = {
 			picture = generic_build_infrastructure
 			modifier = {
-				production_speed_buildings_factor = 0.6
+				production_speed_buildings_factor = 1.2
 				local_resources_factor = 0.1
 				global_building_slots_factor = 0.15
 			}
@@ -217,8 +217,8 @@ ideas = {
 		EBM_engineering_corporation_construction_efficient = {
 			picture = generic_build_infrastructure
 			modifier = {
-				production_speed_buildings_factor = 1.2
-				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.6
+				local_resources_factor = 0.6
 				global_building_slots_factor = 0.15
 			}
 
@@ -254,6 +254,7 @@ ideas = {
 				industrial_capacity_factory = 0.25
 				production_speed_buildings_factor = 0.05
 				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
 			}
 
 			on_add = {
@@ -274,6 +275,7 @@ ideas = {
 				industrial_capacity_factory = 0.5
 				production_speed_buildings_factor = 0.05
 				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
 			}
 
 			on_add = {
@@ -290,6 +292,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.5
 				production_speed_buildings_factor = 0.05
 				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
 			}
 
 			on_add = {
@@ -308,6 +311,7 @@ ideas = {
 				air_close_air_support_defence_factor = 0.15
 				production_speed_buildings_factor = 0.05
 				local_resources_factor = 0.05
+				consumer_goods_factor = 0.05
 			}
 
 			on_add = {
@@ -324,9 +328,10 @@ ideas = {
 			picture = generic_infantry_equipment_manufacturer_3
 			modifier = {
 				production_factory_max_efficiency_factor = 0.6
-				production_lack_of_resource_penalty_factor = -0.1
-				production_factory_start_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.2
+				production_lack_of_resource_penalty_factor = -0.15
+				production_factory_start_efficiency_factor = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+				consumer_goods_factor = 0.05
 			}
 
 			allowed = { always = yes }
@@ -339,6 +344,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.3
 				production_factory_efficiency_gain_factor = 0.2
 				production_factory_start_efficiency_factor = 0.05
+				consumer_goods_factor = 0.05
 			}
 
 			on_add = {
