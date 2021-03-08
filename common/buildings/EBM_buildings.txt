@@ -38,7 +38,6 @@ buildings = {
 		weekly_manpower = 5	
 		army_org_regain = 0.002
 		army_morale_factor = 0.002
-		war_support_weekly = 0.0001
 		max_command_power = 1
 		
 	}
