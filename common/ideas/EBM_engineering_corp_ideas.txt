@@ -231,7 +231,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.3
 				local_resources_factor = 0.1
-				global_building_slots_factor = 0.3
+				global_building_slots_factor = 0.5
 			}
 
 			on_add = {
@@ -330,7 +330,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.6
 				production_lack_of_resource_penalty_factor = -0.15
 				production_factory_start_efficiency_factor = 0.5
-				production_factory_efficiency_gain_factor = 0.5
+				production_factory_efficiency_gain_factor = 1
 				consumer_goods_factor = 0.05
 			}
 

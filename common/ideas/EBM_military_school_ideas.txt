@@ -135,13 +135,13 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.5
 				industrial_capacity_factory = 0.5
 				industrial_capacity_dockyard = 0.5
-                consumer_goods_factor = 0.05
+                consumer_goods_factor = 0.1
 			}
 			
 			on_add = {
 				add_offsite_building = {
 					type = arms_factory
-					level = 10
+					level = 20
 				}
 			}
 

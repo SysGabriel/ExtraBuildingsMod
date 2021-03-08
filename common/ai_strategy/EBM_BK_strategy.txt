@@ -1,4 +1,4 @@
-EBM_MS_build = {
+EBM_BK_build = {
 	enable = {
 		military_school < 1
 	}
